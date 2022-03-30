@@ -641,6 +641,11 @@ p {
     flex-direction: column;
   }
 }
+@media only screen and (max-width: 499px) {
+  .layout--contact {
+    justify-content: flex-start;
+  }
+}
 
 .container-contact {
   display: flex;
@@ -1088,6 +1093,15 @@ input:focus {
 @media only screen and (max-width: 799px) {
   .footer {
     position: static;
+    margin: 0px auto;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .footer {
+    position: fixed;
     margin: 0px auto;
     width: 100%;
     padding: 20px 0px;

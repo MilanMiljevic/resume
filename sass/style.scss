@@ -635,6 +635,10 @@ p {
   @include respSpecif(800) {
     flex-direction: column;
   }
+
+  @include respSpecif(500) {
+    justify-content: flex-start;
+  }
 }
 
 .container-contact {
@@ -1084,6 +1088,14 @@ input:focus {
 
   @include respSpecif(800) {
     position: static;
+    margin: 0px auto;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+
+  @include respSpecif(500) {
+    position: fixed;
     margin: 0px auto;
     width: 100%;
     padding: 20px 0px;
