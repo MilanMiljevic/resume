@@ -49,7 +49,7 @@ function topFunction() {
 
 
 
-var framePath = "../images/";
+var framePath = "./images/";
 var nFrames = 94; //Define amount of images. counting starts at 0, to have it count to 400 you would have to ad 401 images. 
 var fileType = ".jpg";
 
@@ -58,7 +58,7 @@ var fileTypeMob = "-m.jpg";
 
 var pageLengt = 700; // this defines over what distance, in pixels, your image sequence should be displayed. esentally it defines how speady you scroll trough all the individual images. make shure your page has at least this lengt in px aswel.
 
-var framePathTablet = "../imagesTablet/";
+var framePathTablet = "./imagesTablet/";
 var nFramesTablet = 83;
 
 
@@ -155,15 +155,15 @@ var ImageSequenceTween = new TimelineMax()
 
 
                     $('#portfolio').click(function () {
-                        window.open("../pages/portfolio.html", "_self");
+                        window.open("./pages/portfolio.html", "_self");
                     });
 
                     $('#contact').click(function () {
-                        window.open("../pages/contact.html", "_self");
+                        window.open("./pages/contact.html", "_self");
                     });
 
                     $('#skills').click(function () {
-                        window.open("../pages/skills.html", "_self");
+                        window.open("./pages/skills.html", "_self");
                     });
 
                     $('#cv').click(function () {
@@ -187,15 +187,15 @@ var ImageSequenceTween = new TimelineMax()
 
 
                     $('#portfolio-tablet').click(function () {
-                        window.open("../pages/portfolio.html", "_self");
+                        window.open("./pages/portfolio.html", "_self");
                     });
 
                     $('#contact-tablet').click(function () {
-                        window.open("../pages/contact.html", "_self");
+                        window.open("./pages/contact.html", "_self");
                     });
 
                     $('#skills-tablet').click(function () {
-                        window.open("../pages/skills.html", "_self");
+                        window.open("./pages/skills.html", "_self");
                     });
 
                     $('#cv-tablet').click(function () {
@@ -219,15 +219,15 @@ var ImageSequenceTween = new TimelineMax()
 
 
                     $('#portfolio-mob').click(function () {
-                        window.open("../pages/portfolio.html", "_self");
+                        window.open("./pages/portfolio.html", "_self");
                     });
 
                     $('#contact-mob').click(function () {
-                        window.open("../pages/contact.html", "_self");
+                        window.open("./pages/contact.html", "_self");
                     });
 
                     $('#skills-mob').click(function () {
-                        window.open("../pages/skills.html", "_self");
+                        window.open("./pages/skills.html", "_self");
                     });
 
                     $('#cv-mob').click(function () {
