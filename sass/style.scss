@@ -634,7 +634,7 @@ p {
 
   @include respSpecif(800) {
     flex-direction: column;
-    height: -webkit-fill-available;
+   
   }
 
 
@@ -648,6 +648,7 @@ p {
 
   @include respSpecif(800) {
     flex-direction: column;
+    height: auto;
   }
 }
 

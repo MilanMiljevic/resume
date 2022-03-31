@@ -639,7 +639,6 @@ p {
 @media only screen and (max-width: 799px) {
   .layout--contact {
     flex-direction: column;
-    height: -webkit-fill-available;
   }
 }
 
@@ -652,6 +651,7 @@ p {
 @media only screen and (max-width: 799px) {
   .container-contact {
     flex-direction: column;
+    height: auto;
   }
 }
 
