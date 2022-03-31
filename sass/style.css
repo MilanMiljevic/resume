@@ -1101,7 +1101,7 @@ input:focus {
 }
 @media only screen and (max-width: 499px) {
   .footer {
-    position: inherit;
+    position: static;
     margin: 0px auto;
     width: 100%;
     padding: 20px 0px;
@@ -1133,7 +1133,7 @@ input:focus {
 }
 @media only screen and (max-width: 499px) {
   .footer-contact {
-    position: absolute;
+    position: static;
     margin: 0px auto;
     width: 100%;
     padding: 20px 0px;
