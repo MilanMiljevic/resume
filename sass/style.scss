@@ -634,6 +634,7 @@ p {
 
   @include respSpecif(800) {
     flex-direction: column;
+    height: auto;
   }
 
 
@@ -1116,7 +1117,6 @@ input:focus {
   right: 0;
   width: 100%;
   text-align: right;
-  background-color: black;
 
   @include respSpecif(800) {
     position: static;
