@@ -1095,7 +1095,7 @@ input:focus {
   }
 
   @include respSpecif(500) {
-    position: fixed;
+    position: absolute;
     margin: 0px auto;
     width: 100%;
     padding: 20px 0px;
