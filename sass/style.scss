@@ -793,7 +793,7 @@ input:focus {
 
 .email {
   display: block;
-  
+
   .tittle {
     font-size: 1.4rem;
     font-weight: bold;
@@ -1116,6 +1116,7 @@ input:focus {
   right: 0;
   width: 100%;
   text-align: right;
+  background-color: black;
 
   @include respSpecif(800) {
     position: static;
