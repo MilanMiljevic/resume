@@ -634,11 +634,10 @@ p {
 
   @include respSpecif(800) {
     flex-direction: column;
+    height: auto;
   }
 
-  @include respSpecif(500) {
-    justify-content: flex-start;
-  }
+
 }
 
 .container-contact {
