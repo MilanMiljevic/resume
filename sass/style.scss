@@ -634,6 +634,7 @@ p {
 
   @include respSpecif(800) {
     flex-direction: column;
+    min-height: 100vh;
    
   }
 
@@ -648,7 +649,7 @@ p {
 
   @include respSpecif(800) {
     flex-direction: column;
-    height: auto;
+
   }
 }
 
