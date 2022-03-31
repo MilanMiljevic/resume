@@ -1007,7 +1007,7 @@ input:focus {
   border-radius: 10px;
 
   @include respSpecif(800) {
-    margin: 0 auto;
+    margin: 0 20px;
   }
 
   @include respSpecif(400) {
