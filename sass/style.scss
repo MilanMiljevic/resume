@@ -709,11 +709,6 @@ input:focus {
     width: 90%;
   }
 
-  @include respSpecif(400) {
-    width: 95%;
-    padding: 40px;
-  }
-
   .tittle {
     color: gainsboro;
     font-size: 1.4rem;

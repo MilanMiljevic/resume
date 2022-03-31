@@ -716,12 +716,6 @@ input:focus {
     width: 90%;
   }
 }
-@media only screen and (max-width: 399px) {
-  .box {
-    width: 95%;
-    padding: 40px;
-  }
-}
 .box .tittle {
   color: gainsboro;
   font-size: 1.4rem;
