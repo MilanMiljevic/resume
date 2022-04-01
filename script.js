@@ -18,15 +18,6 @@ link_menu.addEventListener('click', function () {
     mobileMenu.classList.toggle('open');
 });
 
-document.onclick = function(e){
-    if(e.target.id !== 'x' && e.target.id !== 'y'){
-        y.classList.remove('active');
-        x.classList.remove('active');
-    
-    }
-
-};
-
 
 //scroll to top
 
@@ -89,9 +80,9 @@ for (i = 0; i < (nFrames); i++) {
     }
 }*/
 
-for (i = 0; i < (nFrames); i++) {
+for (i = 0; i < (nFramesMob); i++) {
     if (width > 1000) {
-        images.push(framePath + pad(i, 4) + fileType);
+        images.push(framePath + pad(i, 4) + fileTypeMob);
     }
 }
 
@@ -101,9 +92,9 @@ for (i = 0; i < (nFramesTablet); i++) {
     }
 }
 
-for (i = 0; i < (nFramesMob); i++) {
+for (i = 0; i < (nFrames); i++) {
     if (width < 500) {
-        images.push(framePath + pad(i, 4) + fileTypeMob);
+        images.push(framePath + pad(i, 4) + fileType);
     }
 }
 
