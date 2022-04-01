@@ -80,9 +80,9 @@ for (i = 0; i < (nFrames); i++) {
     }
 }*/
 
-for (i = 0; i < (nFramesMob); i++) {
+for (i = 0; i < (nFrames); i++) {
     if (width > 1000) {
-        images.push(framePath + pad(i, 4) + fileTypeMob);
+        images.push(framePath + pad(i, 4) + fileType);
     }
 }
 
@@ -92,9 +92,9 @@ for (i = 0; i < (nFramesTablet); i++) {
     }
 }
 
-for (i = 0; i < (nFrames); i++) {
+for (i = 0; i < (nFramesMob); i++) {
     if (width < 500) {
-        images.push(framePath + pad(i, 4) + fileType);
+        images.push(framePath + pad(i, 4) + fileTypeMob);
     }
 }
 
