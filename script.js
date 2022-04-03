@@ -20,12 +20,13 @@ link_menu.addEventListener('click', function () {
 
 
 //scroll to top
-/*
+
 var mybutton = document.getElementById("myBtn");
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+    if (!mybutton) return;
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
@@ -38,7 +39,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-*/
+
 
 var framePath = "./images/";
 var nFrames = 94; //Define amount of images. counting starts at 0, to have it count to 400 you would have to ad 401 images. 
