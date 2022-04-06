@@ -124,7 +124,7 @@ var obj = { curImg: 0 };
 var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
   curImg: images.length - 1, // animate propery curImg to number of images
   roundProps: "curImg", // only integers so it can be used as an array index
-  repeat: 0, // repeat 3 times
+  repeat: 3, // repeat 3 times was 0 here
   immediateRender: true, // load first image automatically
   ease: Linear.easeNone, // show every image the same ammount of time
   onUpdate: function () {
@@ -239,7 +239,7 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
       $(".name-text").css("visibility", "hidden");
     }
 
-    $("#imgsequence").attr("src", images[obj.curImg]).attr("loading", "lazy"); // set the image source
+   $("#imgsequence").attr("src", images[obj.curImg]).attr("loading", "lazy"); // set the image source
   },
 });
 
