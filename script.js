@@ -39,14 +39,14 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-var framePath = "https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/02-head-bob-turn/";
-var nFrames = 132; //Define amount of images. counting starts at 0, to have it count to 400 you would have to ad 401 images.
+var framePath = "./images/";
+var nFrames = 94; //Define amount of images. counting starts at 0, to have it count to 400 you would have to ad 401 images.
 var fileType = ".jpg";
 
 var nFramesMob = 87;
 var fileTypeMob = "-m.jpg";
 
-var pageLengt = 2000; // this defines over what distance, in pixels, your image sequence should be displayed. esentally it defines how speady you scroll trough all the individual images. make shure your page has at least this lengt in px aswel.
+var pageLengt = 700; // this defines over what distance, in pixels, your image sequence should be displayed. esentally it defines how speady you scroll trough all the individual images. make shure your page has at least this lengt in px aswel.
 
 var framePathTablet = "./imagesTablet/";
 var nFramesTablet = 83;
@@ -249,7 +249,7 @@ $(function () {
     triggerElement: ".trigger",
     triggerHook: 0,
     offset: 0,
-    duration: pageLengt,
+    duration: "130%",
   })
 
     .setTween(ImageSequenceTween)
