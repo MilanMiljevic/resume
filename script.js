@@ -58,20 +58,6 @@ var numberSequenceMob = [];
 
 var numberSequenceTablet = [];
 
-/*----------PRELOADER-------------*/
-for (var i = 1; i < nFrames + 1; i++) {
-  $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
-  style="background-image: url(framePath + pad(i, 4) + fileType);"></div>`);
-};
-
-$(window).on('load', function () {
-  setInterval(function () {
-    console.log('here');
-    step();
-  }, 75);
-});
-/*---------------------------*/
-
 function pad(number, length) {
   var str = "" + number;
   while (str.length < length) {
@@ -245,6 +231,20 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
     }
 
     $("#imgsequence").attr("src", images[obj.curImg]).attr("loading", "lazy"); // set the image source
+
+    /*----------PRELOADER-------------*/
+    for (var i = 1; i < nFrames + 1; i++) {
+      $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
+  style="background-image: url('${framePath} ${i, 4}.jpg');"></div>`);
+    };
+
+    $(window).on('load', function () {
+      setInterval(function () {
+        console.log('here');
+        step();
+      }, 75);
+    });
+    /*---------------------------*/
   },
 });
 
