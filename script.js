@@ -58,6 +58,20 @@ var numberSequenceMob = [];
 
 var numberSequenceTablet = [];
 
+/*-----------------------*/
+for (var i = 1; i < nFrames + 1; i++) {
+  $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
+  style="background-image: url('${framePath}/img_${i}.jpg');"></div>`);
+};
+
+$(window).on('load', function () {
+  setInterval(function () {
+    console.log('here');
+    step();
+  }, 75);
+});
+/*---------------------------*/
+
 function pad(number, length) {
   var str = "" + number;
   while (str.length < length) {
