@@ -68,18 +68,18 @@ function pad(number, length) {
 
 /*----------PRELOADER-------------*/
 
-var frameNumber = 0000;
-
-$("#imgsequence").attr('src', framePath + `${frameNumber}.jpg`);
-  if (frameNumber >= nFrames) {
-    frameNumber = 0;
-  } else {
-    frameNumber = frameNumber + 1;
-  } 
+var frameNumber = 1;
 
 for (var i = 0; i < nFrames; i++) {
   $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
   style="background-image: url('${framePath}${pad(i, 4)}.jpg');"></div>`);
+
+  if (frameNumber >= nFrames) {
+    frameNumber = 1;
+  } else {
+    frameNumber = frameNumber + 1;
+  } 
+
 };
 
 /*---------------------------*/
