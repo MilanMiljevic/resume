@@ -39,8 +39,8 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-var framePath = "./images/";
-var nFrames = 94; //Define amount of images. counting starts at 0, to have it count to 400 you would have to ad 401 images.
+var framePath = "https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/02-head-bob-turn/";
+var nFrames = 132; //Define amount of images. counting starts at 0, to have it count to 400 you would have to ad 401 images.
 var fileType = ".jpg";
 
 var nFramesMob = 87;
