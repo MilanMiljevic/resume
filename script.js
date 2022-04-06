@@ -60,7 +60,7 @@ function preLoader(e) {
         var tempImage = new Image();
          
         tempImage.addEventListener("load", progress, true);
-        tempImage.src = imageArray[i];
+        tempImage.src = images[i];
     }
 }
  
