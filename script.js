@@ -233,17 +233,12 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
     $("#imgsequence").attr("src", images[obj.curImg]).attr("loading", "lazy"); // set the image source
 
     /*----------PRELOADER-------------*/
+
     for (var i = 0; i < nFrames; i++) {
       $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
   style="background-image: url('${framePath}${pad(i, 4)}.jpg');"></div>`);
     };
 
-    $(window).on('load', function () {
-      setInterval(function () {
-        console.log('here');
-        step();
-      }, 75);
-    });
     /*---------------------------*/
   },
 });
