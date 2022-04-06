@@ -235,7 +235,7 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
     /*----------PRELOADER-------------*/
     for (var i = 0; i < nFrames; i++) {
       $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
-  style="background-image: url('framePath + pad(i, 4) + fileType');"></div>`);
+  style="background-image: url('${framePath}${pad(i, 4)}.jpg');"></div>`);
     };
 
     $(window).on('load', function () {
