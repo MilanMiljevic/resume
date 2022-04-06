@@ -46,7 +46,7 @@ var fileType = ".jpg";
 var nFramesMob = 87;
 var fileTypeMob = "-m.jpg";
 
-var pageLengt = 700; // this defines over what distance, in pixels, your image sequence should be displayed. esentally it defines how speady you scroll trough all the individual images. make shure your page has at least this lengt in px aswel.
+var pageLengt = 2000; // this defines over what distance, in pixels, your image sequence should be displayed. esentally it defines how speady you scroll trough all the individual images. make shure your page has at least this lengt in px aswel.
 
 var framePathTablet = "./imagesTablet/";
 var nFramesTablet = 83;
@@ -249,7 +249,7 @@ $(function () {
     triggerElement: ".trigger",
     triggerHook: 0,
     offset: 0,
-    duration: "130%",
+    duration: pageLengt,
   })
 
     .setTween(ImageSequenceTween)
