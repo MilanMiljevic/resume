@@ -51,6 +51,32 @@ var pageLengt = 700; // this defines over what distance, in pixels, your image s
 var framePathTablet = "./imagesTablet/";
 var nFramesTablet = 83;
 
+/*---------*/
+var preloaded = 0;
+/*var images = new Array("img1.jpg", "img2.jpg", "img3.jpg");*/
+ 
+function preLoader(e) {
+    for (var i = 0; i < framePath.length; i++) {
+        var tempImage = new Image();
+         
+        tempImage.addEventListener("load", progress, true);
+        tempImage.src = imageArray[i];
+    }
+}
+ 
+function progress() {
+    preloaded++;
+     
+    if (preloaded == imageArray.length) {
+        //ALL Images have been loaded, perform the desired action
+    }
+}
+this.addEventListener("DOMContentLoaded", preLoader, true);
+
+
+
+/*---------------*/
+
 var images = [];
 var numberSequence = [];
 var numberSequenceMob = [];
