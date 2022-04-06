@@ -58,10 +58,10 @@ var numberSequenceMob = [];
 
 var numberSequenceTablet = [];
 
-/*-----------------------*/
+/*----------PRELOADER-------------*/
 for (var i = 1; i < nFrames + 1; i++) {
   $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
-  style="background-image: url('${framePath}/${i}.jpg');"></div>`);
+  style="background-image: url(framePath + pad(i, 4) + fileType);"></div>`);
 };
 
 $(window).on('load', function () {
