@@ -68,25 +68,33 @@ function pad(number, length) {
 
 /*----------PRELOADER-------------*/
 
-var frameNumber = 1;
+var width = window.innerWidth;
 
 for (var i = 0; i < nFrames; i++) {
-  $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
+  if (width > 1000) {
+    $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
   style="background-image: url('${framePath}${pad(i, 4)}.jpg');"></div>`);
-
-  if (frameNumber >= nFrames) {
-    frameNumber = 1;
-  } else {
-    frameNumber = frameNumber + 1;
-  } 
-
+  }
 };
 
+for (var i = 0; i < nFramesTablet; i++) {
+  if (width < 1000 && width > 500) {
+    $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
+  style="background-image: url('${framePathTablet}${pad(i, 4)}.jpg');"></div>`);
+  }
+};
+
+for (var i = 0; i < nFramesMob; i++) {
+  if (width < 500) {
+    $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
+  style="background-image: url('${framePath}${pad(i, 4)}-m.jpg');"></div>`);
+  }
+};
 /*--------------------------*/
 
 // loop through file type
 
-var width = window.innerWidth;
+/*var width = window.innerWidth;*/
 /*
 for (i = 0; i < (nFrames); i++) {
         if (width > 500) {
@@ -248,7 +256,8 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
       $(".name-text").css("visibility", "hidden");
     }
 
-   $("#imgsequence").attr("src", images[obj.curImg]).attr("loading", "lazy"); // set the image source
+    $("#imgsequence").attr("src", images[obj.curImg]).attr("loading", "lazy"); // set the image source
+
   },
 });
 
