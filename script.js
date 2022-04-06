@@ -67,7 +67,7 @@ function preLoader(e) {
 function progress() {
     preloaded++;
      
-    if (preloaded == imageArray.length) {
+    if (preloaded == images.length) {
         //ALL Images have been loaded, perform the desired action
     }
 }
