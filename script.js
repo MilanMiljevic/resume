@@ -239,6 +239,11 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
   style="background-image: url('${framePath}${pad(i, 4)}.jpg');"></div>`);
     };
 
+    $(window).on('load', function () {
+      setInterval(function () {
+        console.log('here');
+      }, 75);
+    });
     /*---------------------------*/
   },
 });
