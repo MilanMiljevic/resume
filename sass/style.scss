@@ -278,7 +278,7 @@ p {
   transition: opacity 0.5s ease-in-out;
 
   @include respSpecif(500) {
-    padding: 30% 10% 16%;
+    padding: 15% 10% 16%;
     width: 100%;
     left: 0;
   }
