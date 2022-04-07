@@ -1163,6 +1163,38 @@ input:focus {
   color: gainsboro;
 }
 
+.footer-job {
+  padding: 20px 20px 20px 0px;
+  float: right;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: right;
+}
+@media only screen and (max-width: 799px) {
+  .footer-job {
+    position: static;
+    margin: 0px auto;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .footer-job {
+    position: fixed;
+    margin: 0px auto;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+}
+.footer-job .copy {
+  font-size: 0.6rem;
+  font-weight: lighter;
+  color: gainsboro;
+}
+
 .footer-index {
   position: fixed;
   margin: 0 20px 20px 0px;

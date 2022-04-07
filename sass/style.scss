@@ -1158,6 +1158,37 @@ input:focus {
   }
 }
 
+.footer-job {
+  padding: 20px 20px 20px 0px;
+  float: right;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: right;
+
+  @include respSpecif(800) {
+    position: static;
+    margin: 0px auto;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+
+  @include respSpecif(500) {
+    position: fixed;
+    margin: 0px auto;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+  }
+
+  .copy {
+    font-size: 0.6rem;
+    font-weight: lighter;
+    color: gainsboro;
+  }
+}
+
 .footer-index {
   position: fixed;
   margin: 0 20px 20px 0px;
