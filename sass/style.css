@@ -409,6 +409,7 @@ p {
   font-weight: normal;
   padding: 0px 15px;
   color: white;
+  cursor: pointer;
 }
 
 .navbar-pages a:hover {
