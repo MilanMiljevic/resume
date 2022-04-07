@@ -1233,6 +1233,11 @@ input:focus {
   text-align: center;
   color: white;
 }
+@media only screen and (max-width: 799px) {
+  .layout--job {
+    height: auto;
+  }
+}
 
 .paragraph {
   text-align: left;

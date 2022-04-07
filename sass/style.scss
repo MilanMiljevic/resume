@@ -1225,6 +1225,10 @@ input:focus {
   height: 100%;
   text-align: center;
   color: white;
+
+  @include respSpecif(800) {
+    height: auto;
+  }
 }
 
 .paragraph {
