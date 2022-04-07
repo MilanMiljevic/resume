@@ -127,7 +127,7 @@ body {
 
 @keyframes strokeAnimation {
   0% {
-    stroke-width: 1px;
+    stroke-width: 2px;
     stroke: orangered;
   }
 
@@ -140,7 +140,7 @@ body {
   }
 
   60% {
-    stroke-width: 5px;
+    stroke-width: 7px;
     stroke: aqua;
   }
 
@@ -149,7 +149,7 @@ body {
   }
 
   100% {
-    stroke-width: 1px;
+    stroke-width: 2px;
     stroke: orangered;
   }
 }
@@ -496,12 +496,12 @@ p {
   /* Styling for second triangle (border) */
 
   @include respSpecif(1000) {
-    top: 40%;
+    top: 30%;
     padding: 0px 20px;
   }
 
   @include respSpecif(500) {
-    top: 40%;
+    top: 38%;
     padding: 0px 20px;
   }
 

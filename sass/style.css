@@ -124,7 +124,7 @@ body {
 }
 @keyframes strokeAnimation {
   0% {
-    stroke-width: 1px;
+    stroke-width: 2px;
     stroke: orangered;
   }
   20% {
@@ -134,14 +134,14 @@ body {
     stroke: white;
   }
   60% {
-    stroke-width: 5px;
+    stroke-width: 7px;
     stroke: aqua;
   }
   80% {
     stroke: greenyellow;
   }
   100% {
-    stroke-width: 1px;
+    stroke-width: 2px;
     stroke: orangered;
   }
 }
@@ -503,13 +503,13 @@ p {
 }
 @media only screen and (max-width: 999px) {
   #note {
-    top: 40%;
+    top: 30%;
     padding: 0px 20px;
   }
 }
 @media only screen and (max-width: 499px) {
   #note {
-    top: 40%;
+    top: 38%;
     padding: 0px 20px;
   }
 }
