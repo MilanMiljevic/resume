@@ -1,3 +1,31 @@
+//typing effect
+
+function typeEffect(element, speed) {
+	var text = element.innerHTML;
+	element.innerHTML = "";
+	
+	var i = 0;
+	var timer = setInterval(function() {
+    if (i < text.length) {
+      element.append(text.charAt(i));
+      i++;
+    } else {
+      clearInterval(timer);
+    }
+  }, speed);
+}
+
+
+// application
+var speed = 30;
+var p = document.querySelector('.paragraph');
+
+// type affect to body
+setTimeout(function(){
+  p.style.display = "inline-block";
+  typeEffect(p, speed);
+});
+
 //burger menu
 
 burger = document.querySelector(".burger");
@@ -295,3 +323,6 @@ $(document).ready(function() {
     });
 
 });*/
+
+
+
