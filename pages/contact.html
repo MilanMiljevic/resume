@@ -54,22 +54,22 @@
     <section class="box">
         <div class="tittle">Thank you for your time.</div>
         <div class="subtittle">Let's get in touch.</div>
-        <form action="">
+        <form action="" onsubmit="sendEmail(); reset(); return false;">
             <fieldset class="f">
                 <label for="">Name</label>
-                <input type="text">
+                <input type="text" id="name">
             </fieldset>
             <fieldset class="f">
-                <label for="">Last Name</label>
-                <input type="text">
-            </fieldset>
+              <label for="">Last Name</label>
+              <input type="text" id="lastName">
+          </fieldset>
             <fieldset class="f">
                 <label for="">Email</label>
-                <input type="text">
+                <input type="email" id="email">
             </fieldset>
             <fieldset class="f">
                 <label for="">Message</label>
-                <textarea name="" id="" cols="10" rows="5"></textarea>
+                <textarea name="" id="msg" cols="10" rows="5"></textarea>
             </fieldset>
             <fieldset class="submit">
                 <button class="btn" type="submit" id="contact-submit">Send</button>
@@ -84,6 +84,26 @@
   </section>
 
     <footer class="footer-contact"><p class="copy">© 2022 M.Miljević</p></footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+      Host : "smtp.gmail.com",
+      Username : "milan.miljevic19@gmail.com",
+      Password : "M@$a0597",
+      To : 'milan.miljevic19@gmail.com',
+      From : document.getElementById("email").value,
+      Subject : "This is the subject",
+      Body : "Name: " + document.getElementById("name").value
+      + "<br> Last name" + document.getElementById("lastName").value
+      + "<br> Email" + document.getElementById("email").value
+      + "<br> Message" + document.getElementById("msg").value
+  }).then(
+    message => alert(message)
+  );
+      }
+    </script>
 
 </body>
 
