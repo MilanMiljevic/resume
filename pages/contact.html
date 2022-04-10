@@ -54,25 +54,26 @@
     <section class="box">
         <div class="tittle">Thank you for your time.</div>
         <div class="subtittle">Let's get in touch.</div>
-        <form action="" onsubmit="sendEmail(); reset(); return false;">
+        <form action="https://formsubmit.co/milan.miljevic19@gmail.com" method="POST">
             <fieldset class="f">
                 <label for="">Name</label>
-                <input type="text" id="name">
+                <input type="text" name="name" required>
             </fieldset>
             <fieldset class="f">
               <label for="">Last Name</label>
-              <input type="text" id="lastName">
+              <input type="text" name="lastName" required>
           </fieldset>
             <fieldset class="f">
                 <label for="">Email</label>
-                <input type="email" id="email">
+                <input type="email" name="email" required>
             </fieldset>
             <fieldset class="f">
                 <label for="">Message</label>
-                <textarea name="" id="msg" cols="10" rows="5"></textarea>
+                <textarea name="" name="msg" cols="10" rows="5" required></textarea>
             </fieldset>
+            <input type="hidden" name="_next" value="https://hire-me-lan.com/thankyou.html">
             <fieldset class="submit">
-                <button class="btn" type="submit" id="contact-submit">Send</button>
+                <button class="btn" type="submit">Send</button>
             </fieldset>
         </form>
     </section>
@@ -84,24 +85,6 @@
   </section>
 
     <footer class="footer-contact"><p class="copy">© 2022 M.Miljević</p></footer>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail() {
-        Email.send({
-          secureToken: "2635de33-e291-4f82-9d0c-fdc03f913d48",
-      To : 'milan.miljevic19@gmail.com',
-      From : document.getElementById("email").value,
-      Subject : "This is the subject",
-      Body : "Name: " + document.getElementById("name").value
-      + "<br> Last name" + document.getElementById("lastName").value
-      + "<br> Email" + document.getElementById("email").value
-      + "<br> Message" + document.getElementById("msg").value
-  }).then(
-    message => alert(message)
-  );
-      }
-    </script>
 
 </body>
 
