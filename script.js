@@ -26,6 +26,15 @@ setTimeout(function(){
   typeEffect(p, speed);
 });
 
+
+var t = document.querySelector('.paragraph-t');
+
+// type affect to body
+setTimeout(function(){
+  t.style.display = "inline-block";
+  typeEffect(t, speed);
+});
+
 //burger menu
 
 burger = document.querySelector(".burger");

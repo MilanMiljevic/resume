@@ -1296,6 +1296,19 @@ input:focus {
   }
 }
 
+.paragraph-t {
+  text-align: left;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: none;
+}
+@media only screen and (max-width: 499px) {
+  .paragraph-t {
+    margin-top: 100px;
+  }
+}
+
 #table {
   display: table;
   width: 100%;
@@ -1311,12 +1324,6 @@ input:focus {
   #centeralign {
     vertical-align: top;
   }
-}
-
-/*-------THANK YOU PAGE--------*/
-.confirm {
-  font-size: 3rem;
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
