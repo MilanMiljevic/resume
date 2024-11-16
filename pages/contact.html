@@ -2,89 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résumé - Contact</title>
-    <link rel="stylesheet" href="../sass/style.css">
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <script src="https://kit.fontawesome.com/fd1c02e41b.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résumé - Contact</title>
+  <link rel="stylesheet" href="../sass/style.css">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <script src="https://kit.fontawesome.com/fd1c02e41b.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="layout layout--contact">
-    <header class="navbar-pages">
-        <div class="tab">
-          <button class="back" onclick="history.back(-1)"><i class="fa-solid fa-arrow-left"></i>&nbsp BACK</button>
+  <header class="navbar-pages">
+    <div class="tab">
+      <button class="back" onclick="history.back(-1)"><i class="fa-solid fa-arrow-left"></i>&nbsp BACK</button>
+    </div>
+    <!--burger-menu-->
+    <div class="burger-wrap">
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="mobile-menu">
+      <div>
+        <div>
+          <li class="mobile-menu__item">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="../pages/portfolio.html">Portfolio</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="../pages/skills.html">Skills</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="https://www.linkedin.com/in/milan-m-835400236/" target="_blank">CV</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="link-menu" href="../pages/job.html">Job</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="../pages/contact.html">Contact</a>
+          </li>
         </div>
-        <!--burger-menu-->
-        <div class="burger-wrap">
-            <div class="burger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-           </div>
-            <div class="mobile-menu">
-              <div>
-                <div>
-                  <li class="mobile-menu__item">
-                    <a href="../index.html">Home</a>
-                  </li>
-                  <li class="mobile-menu__item">
-                    <a href="../pages/portfolio.html">Portfolio</a>
-                  </li>
-                  <li class="mobile-menu__item">
-                    <a href="../pages/skills.html">Skills</a>
-                  </li>
-                  <li class="mobile-menu__item">
-                    <a href="https://www.linkedin.com/in/milan-m-835400236/" target="_blank">CV</a>
-                  </li>
-                  <li class="mobile-menu__item">
-                    <a class="link-menu" href="../pages/job.html">Job</a>
-                  </li>
-                  <li class="mobile-menu__item">
-                    <a href="../pages/contact.html">Contact</a>
-                  </li>
-                </div>
-              </div>
-            </div>
-          </div>
-    </header>
-    <section class="container-contact">
+      </div>
+    </div>
+    </div>
+  </header>
+  <section class="container-contact">
     <section class="box">
-        <div class="tittle">Thank you for your time.</div>
-        <div class="subtittle">Let's get in touch.</div>
-        <form action="https://formsubmit.co/milan.miljevic19@gmail.com" method="POST">
-            <fieldset class="f">
-                <label for="">Name</label>
-                <input type="text" name="name" required>
-            </fieldset>
-            <fieldset class="f">
-              <label for="">Last Name</label>
-              <input type="text" name="lastName" required>
-          </fieldset>
-            <fieldset class="f">
-                <label for="">Email</label>
-                <input type="email" name="email" required>
-            </fieldset>
-            <fieldset class="f">
-                <label for="">Message</label>
-                <textarea name="" name="msg" cols="10" rows="5" required></textarea>
-            </fieldset>
-            <input type="hidden" name="_next" value="https://hire-me-lan.com/pages/thankyou.html">
-            <fieldset class="submit">
-                <button class="btn" type="submit">Send</button>
-            </fieldset>
-        </form>
+      <div class="tittle">Thank you for your time.</div>
+      <div class="subtittle">Let's get in touch.</div>
+      <form action="https://formsubmit.co/milan.miljevic19@gmail.com" method="POST">
+        <fieldset class="f">
+          <label for="">Name</label>
+          <input type="text" name="name" required>
+        </fieldset>
+        <fieldset class="f">
+          <label for="">Last Name</label>
+          <input type="text" name="lastName" required>
+        </fieldset>
+        <fieldset class="f">
+          <label for="">Email</label>
+          <input type="email" name="email" required>
+        </fieldset>
+        <fieldset class="f">
+          <label for="">Message</label>
+          <textarea name="" name="msg" cols="10" rows="5" required></textarea>
+        </fieldset>
+        <input type="hidden" name="_next" value="https://hire-me-lan.com/pages/thankyou.html">
+        <fieldset class="submit">
+          <button class="btn" type="submit">Send</button>
+        </fieldset>
+      </form>
     </section>
     <section class="email">
-        <div class="subtittle">or email me at</div>
-        <div class="tittle">milan.miljevic19@gmail.com</div>
+      <div class="subtittle">or email me at</div>
+      <div class="tittle">milan.miljevic19@gmail.com</div>
     </section>
 
   </section>
 
-    <footer class="footer-contact"><p class="copy">© 2022 M.Miljević</p></footer>
+  <footer class="footer-contact">
+    <p class="copy">© 2024 M.Miljević</p>
+  </footer>
 
 </body>
 
