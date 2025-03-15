@@ -1,0 +1,247 @@
+@use "mixins";
+
+.layout--skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #040404;
+
+  @include mixins.respSpecif(800) {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+}
+
+.container-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @include mixins.respSpecif(800) {
+    flex-direction: column;
+  }
+
+  @include mixins.respSpecif(500) {
+    display: block;
+  }
+}
+
+.tittle-mob {
+  display: none;
+  text-align: center;
+  color: gainsboro;
+
+  @include mixins.respSpecif(800) {
+    display: block;
+  }
+
+  .tittle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  .subtittle {
+    font-size: 1.2rem;
+    font-weight: normal;
+    padding-bottom: 15px;
+  }
+}
+
+.belt-image {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.karate-image {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 80px;
+
+  @include mixins.respSpecif(800) {
+    flex-direction: row;
+    padding-right: 0px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @include mixins.respSpecif(400) {
+    padding: 0px;
+  }
+
+  .karate {
+    width: 250px;
+    padding-bottom: 15px;
+    object-fit: cover;
+
+    @include mixins.respSpecif(800) {
+      margin-right: 20px;
+    }
+
+    @include mixins.respSpecif(400) {
+      width: 200px;
+    }
+  }
+
+  .tittle-desktop {
+    text-align: center;
+    color: gainsboro;
+
+    @include mixins.respSpecif(800) {
+      display: none;
+    }
+
+    .tittle {
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+
+    .subtittle {
+      font-size: 1rem;
+      font-weight: normal;
+      padding-bottom: 15px;
+    }
+  }
+
+  .belts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .belt {
+      width: 110px;
+      transition: 0.3s;
+
+      @include mixins.respSpecif(400) {
+        width: 100px;
+      }
+
+      @include mixins.respSpecif(350) {
+        width: 80px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .line {
+      width: 250px;
+      padding-bottom: 12px;
+    }
+
+    .w {
+      border-bottom: 5px solid white;
+    }
+    .y {
+      border-bottom: 5px solid #ffff00;
+    }
+    .o {
+      border-bottom: 5px solid #ff8c00;
+    }
+    .g {
+      border-bottom: 5px solid green;
+    }
+    .b {
+      border-bottom: 5px solid blue;
+    }
+    .br {
+      border-bottom: 5px solid #8b4513;
+    }
+    .k {
+      border: 1px solid black;
+      outline: 1px solid white;
+      padding: 2px 0;
+      margin-top: 10px;
+    }
+  }
+}
+
+.table {
+  padding: 50px 70px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+
+  @include mixins.respSpecif(800) {
+    margin: 0 20px;
+  }
+
+  @include mixins.respSpecif(400) {
+    padding: 25px 45px;
+  }
+
+  .rank {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      margin: 8px 20px 8px 0;
+      vertical-align: middle;
+    }
+
+    .line {
+      width: 200px;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+
+      -webkit-animation: fadein 1s; // Safari, Chrome and Opera > 12.1
+      -moz-animation: fadein 1s; // Firefox < 16
+      -ms-animation: fadein 1s; // Internet Explorer
+      -o-animation: fadein 1s; // Opera < 12.1
+      animation: fadein 1s;
+    }
+
+    @keyframes fadein {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .w {
+      border: 2px solid white;
+    }
+
+    .y {
+      border: 2px solid #ffff00;
+    }
+    .o {
+      border: 2px solid #ff8c00;
+    }
+    .g {
+      border: 2px solid green;
+    }
+    .b {
+      border: 2px solid blue;
+    }
+    .br {
+      border: 2px solid #8b4513;
+    }
+    .k {
+      border: 2px solid black;
+      outline: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}

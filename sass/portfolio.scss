@@ -1,0 +1,72 @@
+@use "mixins";
+
+.layout--port {
+  height: auto;
+}
+
+.gif {
+  columns: 1;
+  margin: auto;
+  max-width: 1200px;
+  column-gap: 15px;
+}
+
+.gif-desktop {
+  width: 100%;
+  /*max-width: 300px;*/
+  border-radius: 0.4em;
+
+  @include mixins.respSpecif(500) {
+    display: none;
+  }
+}
+
+.gif-mob {
+  display: none;
+
+  @include mixins.respSpecif(500) {
+    display: block;
+    width: 100%;
+    border-radius: 0.4em;
+    margin-bottom: 5px;
+  }
+}
+
+.gallery {
+  columns: 3;
+  margin: auto;
+  max-width: 1200px;
+  column-gap: 15px;
+}
+.image-portfolio {
+  width: 100%;
+  /*max-width: 300px;*/
+  margin-top: 15px;
+  border-radius: 0.4em;
+}
+
+@media screen and (max-width: 767px) {
+  .gallery {
+    columns: 1;
+    max-width: 100%;
+    margin: 0px 10px;
+    column-gap: 5px;
+  }
+
+  .image-portfolio {
+    margin-top: 5px;
+  }
+
+  .gif {
+    max-width: 100%;
+    margin: 0px 10px;
+    column-gap: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .gallery {
+    columns: 2;
+    max-width: 100%;
+  }
+}

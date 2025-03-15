@@ -1,0 +1,199 @@
+@use "mixins";
+
+.layout--contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #040404;
+
+  @include mixins.respSpecif(800) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.container-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @include mixins.respSpecif(800) {
+    flex-direction: column;
+  }
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: whitesmoke;
+  font-family: "Open Sans", sans-serif;
+
+  @include mixins.respSpecif(700) {
+    font-size: 0.6rem;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.box {
+  padding: 50px;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-right: 50px;
+
+  @include mixins.respSpecif(1500) {
+    width: 40%;
+    padding: 40px;
+  }
+
+  @include mixins.respSpecif(800) {
+    width: 60%;
+    padding: 40px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+  }
+
+  @include mixins.respSpecif(700) {
+    width: 70%;
+  }
+
+  @include mixins.respSpecif(500) {
+    width: 90%;
+  }
+
+  .tittle {
+    color: gainsboro;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: none;
+    padding-bottom: 10px;
+
+    @include mixins.respSpecif(700) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .subtittle {
+    color: gainsboro;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-shadow: none;
+    padding-bottom: 70px;
+
+    @include mixins.respSpecif(700) {
+      font-size: 1rem;
+    }
+  }
+  form {
+    .f {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10px;
+      font-size: 0.6rem;
+      font-weight: normal;
+      text-shadow: none;
+      color: gainsboro;
+
+      label {
+        padding-bottom: 2px;
+      }
+
+      input {
+        background-color: transparent;
+        border: none;
+        height: 2rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: whitesmoke;
+        border-bottom: 1px solid gainsboro;
+
+        @include mixins.respSpecif(700) {
+          font-size: 0.6rem;
+        }
+      }
+    }
+    .submit {
+      display: flex;
+      justify-content: flex-end;
+
+      @include mixins.respSpecif(700) {
+        margin-top: 10px;
+        justify-content: center;
+      }
+
+      .btn {
+        padding: 4px 20px;
+        background-color: gainsboro;
+        border: 1px solid #040404;
+        color: #040404;
+        border-radius: 2px;
+        font-size: 0.7rem;
+        font-weight: normal;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 1px solid gainsboro;
+          color: gainsboro;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.email {
+  display: block;
+
+  .tittle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: gainsboro;
+
+    @include mixins.respSpecif(800) {
+      font-size: 1.2rem;
+      padding-bottom: 10px;
+    }
+
+    @include mixins.respSpecif(400) {
+      font-size: 1rem;
+    }
+
+    @include mixins.respSpecif(300) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .subtittle {
+    padding-bottom: 10px;
+    font-size: 1rem;
+    font-weight: normal;
+    color: gainsboro;
+
+    @include mixins.respSpecif(800) {
+      font-size: 1rem;
+    }
+
+    @include mixins.respSpecif(400) {
+      font-size: 0.8rem;
+    }
+  }
+}

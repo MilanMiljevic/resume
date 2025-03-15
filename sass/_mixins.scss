@@ -1,5 +1,5 @@
 @mixin respSpecif($dimension) {
-    @media only screen and (max-width: #{$dimension - 1}px) {
-        @content;
-    }
+  @media screen and (max-width: #{$dimension - 1}px) {
+    @content;
+  }
 }

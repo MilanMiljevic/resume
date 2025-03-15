@@ -1,0 +1,89 @@
+@use "mixins";
+/*-------JOB-----------*/
+
+.layout--job {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+  color: white;
+
+  @include mixins.respSpecif(800) {
+    height: auto;
+  }
+}
+
+.paragraph {
+  text-align: left;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  width: 40%;
+  display: none;
+
+  @include mixins.respSpecif(1100) {
+    width: 50%;
+  }
+
+  @include mixins.respSpecif(800) {
+    width: 70%;
+  }
+
+  @include mixins.respSpecif(500) {
+    margin-top: 100px;
+    width: 90%;
+  }
+}
+
+.paragraph-t {
+  text-align: left;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: none;
+
+  @include mixins.respSpecif(500) {
+    margin-top: 100px;
+  }
+}
+
+#table {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#centeralign {
+  display: table-cell;
+  vertical-align: middle;
+  @include mixins.respSpecif(500) {
+    vertical-align: top;
+  }
+}
+
+/*----JOB----*/
+
+.layout--job {
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #040404;
+
+  .box {
+    padding: 50px;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+    .note {
+      color: gainsboro;
+      font-size: 1rem;
+      font-weight: normal;
+      padding: 10px 30px;
+    }
+  }
+}
