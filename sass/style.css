@@ -645,12 +645,12 @@ p {
 .container-skills {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
 }
 @media screen and (max-width: 799px) {
   .container-skills {
     flex-direction: column;
+    align-items: center;
   }
 }
 @media screen and (max-width: 499px) {
@@ -672,19 +672,7 @@ p {
 .tittle-mob .tittle {
   font-size: 1.6rem;
   font-weight: bold;
-  padding-bottom: 10px;
-}
-.tittle-mob .subtittle {
-  font-size: 1.2rem;
-  font-weight: normal;
-  padding-bottom: 15px;
-}
-
-.belt-image {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  display: inline-block;
+  padding-bottom: 50px;
 }
 
 .karate-image {
@@ -741,62 +729,7 @@ p {
 .head .tittle-desktop .tittle {
   font-size: 1.4rem;
   font-weight: bold;
-  padding-bottom: 10px;
-}
-.head .tittle-desktop .subtittle {
-  font-size: 1rem;
-  font-weight: normal;
-  padding-bottom: 15px;
-}
-.head .belts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.head .belts .belt {
-  width: 110px;
-  transition: 0.3s;
-}
-@media screen and (max-width: 399px) {
-  .head .belts .belt {
-    width: 100px;
-  }
-}
-@media screen and (max-width: 349px) {
-  .head .belts .belt {
-    width: 80px;
-  }
-}
-.head .belts .belt:hover {
-  transform: scale(1.1);
-}
-.head .belts .line {
-  width: 250px;
-  padding-bottom: 12px;
-}
-.head .belts .w {
-  border-bottom: 5px solid white;
-}
-.head .belts .y {
-  border-bottom: 5px solid #ffff00;
-}
-.head .belts .o {
-  border-bottom: 5px solid #ff8c00;
-}
-.head .belts .g {
-  border-bottom: 5px solid green;
-}
-.head .belts .b {
-  border-bottom: 5px solid blue;
-}
-.head .belts .br {
-  border-bottom: 5px solid #8b4513;
-}
-.head .belts .k {
-  border: 1px solid black;
-  outline: 1px solid white;
-  padding: 2px 0;
-  margin-top: 10px;
+  padding-bottom: 50px;
 }
 
 .table {
@@ -873,8 +806,8 @@ p {
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 .table .rank .line.o {
-  background: #ff8c00;
-  border: 1px solid #cc7000;
+  background: #a85d03;
+  border: 1px solid #7f4701;
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 .table .rank .line.g {
@@ -888,8 +821,8 @@ p {
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 .table .rank .line.br {
-  background: #8b4513;
-  border: 1px solid #6b350f;
+  background: #472309;
+  border: 1px solid #381a05;
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 .table .rank .line.k {

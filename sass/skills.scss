@@ -17,11 +17,11 @@
 .container-skills {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
 
   @include mixins.respSpecif(800) {
     flex-direction: column;
+    align-items: center;
   }
 
   @include mixins.respSpecif(500) {
@@ -41,21 +41,8 @@
   .tittle {
     font-size: 1.6rem;
     font-weight: bold;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
   }
-
-  .subtittle {
-    font-size: 1.2rem;
-    font-weight: normal;
-    padding-bottom: 15px;
-  }
-}
-
-.belt-image {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  display: inline-block;
 }
 
 .karate-image {
@@ -108,66 +95,7 @@
     .tittle {
       font-size: 1.4rem;
       font-weight: bold;
-      padding-bottom: 10px;
-    }
-
-    .subtittle {
-      font-size: 1rem;
-      font-weight: normal;
-      padding-bottom: 15px;
-    }
-  }
-
-  .belts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .belt {
-      width: 110px;
-      transition: 0.3s;
-
-      @include mixins.respSpecif(400) {
-        width: 100px;
-      }
-
-      @include mixins.respSpecif(350) {
-        width: 80px;
-      }
-
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-
-    .line {
-      width: 250px;
-      padding-bottom: 12px;
-    }
-
-    .w {
-      border-bottom: 5px solid white;
-    }
-    .y {
-      border-bottom: 5px solid #ffff00;
-    }
-    .o {
-      border-bottom: 5px solid #ff8c00;
-    }
-    .g {
-      border-bottom: 5px solid green;
-    }
-    .b {
-      border-bottom: 5px solid blue;
-    }
-    .br {
-      border-bottom: 5px solid #8b4513;
-    }
-    .k {
-      border: 1px solid black;
-      outline: 1px solid white;
-      padding: 2px 0;
-      margin-top: 10px;
+      padding-bottom: 50px;
     }
   }
 }
@@ -248,8 +176,8 @@
       }
 
       &.o {
-        background: #ff8c00;
-        border: 1px solid #cc7000;
+        background: #a85d03;
+        border: 1px solid #7f4701;
         box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
       }
 
@@ -266,8 +194,8 @@
       }
 
       &.br {
-        background: #8b4513;
-        border: 1px solid #6b350f;
+        background: #472309;
+        border: 1px solid #381a05;
         box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
       }
 
