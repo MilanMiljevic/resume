@@ -1,11 +1,11 @@
 //typing effect
 
 function typeEffect(element, speed) {
-	var text = element.innerHTML;
-	element.innerHTML = "";
-	
-	var i = 0;
-	var timer = setInterval(function() {
+  var text = element.innerHTML;
+  element.innerHTML = "";
+
+  var i = 0;
+  var timer = setInterval(function () {
     if (i < text.length) {
       element.append(text.charAt(i));
       i++;
@@ -15,22 +15,20 @@ function typeEffect(element, speed) {
   }, speed);
 }
 
-
 // application
 var speed = 30;
-var p = document.querySelector('.paragraph');
+var p = document.querySelector(".paragraph");
 
 // type affect to body
-setTimeout(function(){
+setTimeout(function () {
   p.style.display = "inline-block";
   typeEffect(p, speed);
 });
 
-
-var t = document.querySelector('.paragraph-t');
+var t = document.querySelector(".paragraph-t");
 
 // type affect to body
-setTimeout(function(){
+setTimeout(function () {
   t.style.display = "inline-block";
   typeEffect(t, speed);
 });
@@ -88,7 +86,6 @@ var pageLengt = 700; // this defines over what distance, in pixels, your image s
 var framePathTablet = "./imagesTablet/";
 var nFramesTablet = 83;
 
-
 var images = [];
 var numberSequence = [];
 var numberSequenceMob = [];
@@ -109,24 +106,24 @@ var width = window.innerWidth;
 
 for (var i = 0; i < nFrames; i++) {
   if (width > 1000) {
-    $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
+    $(".img-seq").append(`<div class="preload-img" id="preload-image-${i}" 
   style="background-image: url('${framePath}${pad(i, 4)}.jpg');"></div>`);
   }
-};
+}
 
 for (var i = 0; i < nFramesTablet; i++) {
   if (width < 1000 && width > 500) {
-    $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
+    $(".img-seq").append(`<div class="preload-img" id="preload-image-${i}" 
   style="background-image: url('${framePathTablet}${pad(i, 4)}.jpg');"></div>`);
   }
-};
+}
 
 for (var i = 0; i < nFramesMob; i++) {
   if (width < 500) {
-    $('.img-seq').append(`<div class="preload-img" id="preload-image-${i}" 
+    $(".img-seq").append(`<div class="preload-img" id="preload-image-${i}" 
   style="background-image: url('${framePath}${pad(i, 4)}-m.jpg');"></div>`);
   }
-};
+}
 /*--------------------------*/
 
 // loop through file type
@@ -287,14 +284,13 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
       $(".welcome-text").css("visibility", "hidden");
     }
 
-    if (numberSequence[obj.curImg] >= 52 && numberSequence[obj.curImg] <= 72) {
+    if (numberSequence[obj.curImg] >= 52 && numberSequence[obj.curImg] <= 92) {
       $(".name-text").css("visibility", "visible");
     } else {
       $(".name-text").css("visibility", "hidden");
     }
 
     $("#imgsequence").attr("src", images[obj.curImg]).attr("loading", "lazy"); // set the image source
-
   },
 });
 
@@ -332,6 +328,3 @@ $(document).ready(function() {
     });
 
 });*/
-
-
-
