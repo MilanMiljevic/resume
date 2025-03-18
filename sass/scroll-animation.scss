@@ -252,14 +252,13 @@ p {
     position: absolute;
 
     @include mixins.respSpecif(500) {
-      border-left: none;
-      border-right: none;
-      border-top: none;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
       border-bottom: 20px solid #000000;
-      bottom: 100%;
+      top: -19px;
       content: "";
       left: 30%;
-      margin-left: 10px;
+      margin-left: -20px;
       position: absolute;
     }
   }
@@ -274,9 +273,11 @@ p {
     margin-left: -20px;
 
     @include mixins.respSpecif(500) {
-      bottom: 100%;
-      border-top: none;
-      border-top: none;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid white;
+      top: -21px;
+      margin-left: -20px;
     }
   }
 }
@@ -303,10 +304,9 @@ p {
   }
 
   .bubble {
-    background-color: #dfe6e9;
+    background-color: #000000;
     border: 1px solid white;
-    border-radius: 15px;
-    border-radius: 5px;
+    border-radius: 25px;
     display: inline-block;
     position: relative;
 
@@ -314,34 +314,46 @@ p {
       font-weight: normal;
       font-size: 0.9rem;
       padding: 15px;
-      color: black;
+      color: rgba(255, 255, 255, 0.85);
     }
   }
+
   .bubble:after,
   .bubble:before {
-    border-bottom: 20px solid #dfe6e9;
-    bottom: 100%;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #000000;
+    top: -19px;
     content: "";
-    left: 10%;
-    margin-left: 10px;
+    left: 15%;
+    margin-left: -20px;
     position: absolute;
 
-    @include mixins.respSpecif(1000) {
-      left: 40%;
-    }
-
     @include mixins.respSpecif(500) {
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid #000000;
+      top: -19px;
+      content: "";
       left: 30%;
+      margin-left: -20px;
+      position: absolute;
     }
   }
-
-  /* Styling for second triangle (border) */
 
   .bubble:before {
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top-color: inherit;
-    /* Can't be included in the shorthand to work */
+    border-bottom: 20px solid white;
+    top: -21px;
     margin-left: -20px;
+
+    @include mixins.respSpecif(500) {
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid white;
+      top: -21px;
+      margin-left: -20px;
+    }
   }
 }
