@@ -284,7 +284,7 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
       $(".welcome-text").css("visibility", "hidden");
     }
 
-    if (numberSequence[obj.curImg] >= 52 && numberSequence[obj.curImg] <= 92) {
+    if (numberSequence[obj.curImg] >= 52 && numberSequence[obj.curImg] <= 82) {
       $(".name-text").css("visibility", "visible");
     } else {
       $(".name-text").css("visibility", "hidden");

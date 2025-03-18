@@ -440,25 +440,24 @@ p {
 #message .bubble {
   display: inline-block;
   position: relative;
-  background-color: #dfe6e9;
+  background-color: #000000;
   border: 1px solid white;
-  border-radius: 15px;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 #message .bubble .text {
   font-weight: normal;
   font-size: 0.9rem;
   padding: 15px;
-  color: black;
+  color: rgba(255, 255, 255, 0.85);
 }
 #message .bubble:after,
 #message .bubble:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 20px solid #dfe6e9;
-  bottom: -20px;
+  border-top: 20px solid #000000;
+  bottom: -19px;
   content: "";
-  left: 10%;
+  left: 15%;
   margin-left: -20px;
   position: absolute;
 }
@@ -468,7 +467,7 @@ p {
     border-left: none;
     border-right: none;
     border-top: none;
-    border-bottom: 20px solid #dfe6e9;
+    border-bottom: 20px solid #000000;
     bottom: 100%;
     content: "";
     left: 30%;
@@ -479,15 +478,15 @@ p {
 #message .bubble:before {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: none;
-  border-top-color: inherit;
-  /* Can't be included in the shorthand to work */
-  top: -20px;
+  border-top: 20px solid white;
+  bottom: -21px;
   margin-left: -20px;
 }
 @media screen and (max-width: 499px) {
   #message .bubble:before {
-    bottom: none;
+    bottom: 100%;
+    border-top: none;
+    border-top: none;
   }
 }
 
