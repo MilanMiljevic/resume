@@ -230,8 +230,9 @@ p {
     display: inline-block;
     position: relative;
     background-color: #000000;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 25px;
+    padding: 5px;
 
     .text {
       font-weight: normal;
@@ -255,9 +256,9 @@ p {
       border-left: 20px solid transparent;
       border-right: 20px solid transparent;
       border-bottom: 20px solid #000000;
-      top: -19px;
-      content: "";
-      left: 30%;
+      border-top: none;
+      bottom: 99%;
+      left: 25%;
       margin-left: -20px;
       position: absolute;
     }
@@ -268,15 +269,16 @@ p {
   .bubble:before {
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid white;
+    border-top: 20px solid rgba(255, 255, 255, 0.7);
     bottom: -21px;
     margin-left: -20px;
 
     @include mixins.respSpecif(500) {
       border-left: 20px solid transparent;
       border-right: 20px solid transparent;
-      border-bottom: 20px solid white;
-      top: -21px;
+      border-bottom: 20px solid rgba(255, 255, 255, 0.7);
+      border-top: none;
+      bottom: 100%;
       margin-left: -20px;
     }
   }
@@ -305,10 +307,11 @@ p {
 
   .bubble {
     background-color: #000000;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 25px;
     display: inline-block;
     position: relative;
+    padding: 5px;
 
     .text {
       font-weight: normal;
@@ -325,7 +328,7 @@ p {
     border-bottom: 20px solid #000000;
     top: -19px;
     content: "";
-    left: 15%;
+    left: 20%;
     margin-left: -20px;
     position: absolute;
 
@@ -335,7 +338,7 @@ p {
       border-bottom: 20px solid #000000;
       top: -19px;
       content: "";
-      left: 30%;
+      left: 35%;
       margin-left: -20px;
       position: absolute;
     }
@@ -344,14 +347,14 @@ p {
   .bubble:before {
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 20px solid white;
+    border-bottom: 20px solid rgba(255, 255, 255, 0.7);
     top: -21px;
     margin-left: -20px;
 
     @include mixins.respSpecif(500) {
       border-left: 20px solid transparent;
       border-right: 20px solid transparent;
-      border-bottom: 20px solid white;
+      border-bottom: 20px solid rgba(255, 255, 255, 0.7);
       top: -21px;
       margin-left: -20px;
     }
