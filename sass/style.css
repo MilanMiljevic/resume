@@ -448,6 +448,7 @@ p {
 #message .bubble .text {
   font-weight: normal;
   font-size: 0.9rem;
+  line-height: 1.2;
   padding: 15px;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -526,6 +527,7 @@ p {
 #note .bubble .text {
   font-weight: normal;
   font-size: 0.9rem;
+  line-height: 1.2;
   padding: 15px;
   color: rgba(255, 255, 255, 0.85);
 }
