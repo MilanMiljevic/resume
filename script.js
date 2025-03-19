@@ -328,3 +328,15 @@ $(document).ready(function() {
     });
 
 });*/
+
+//active link
+document.addEventListener("DOMContentLoaded", function () {
+  const path = window.location.pathname;
+  const links = document.querySelectorAll(".navbar-screens a", "navbar a");
+
+  links.forEach((link) => {
+    if (link.getAttribute("href").includes(path)) {
+      link.setAttribute("aria-current", "page");
+    }
+  });
+});

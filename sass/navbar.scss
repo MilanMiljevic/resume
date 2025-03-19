@@ -36,12 +36,16 @@
   text-decoration: none;
   font-size: 0.9em;
   font-weight: lighter;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
+
+  &[aria-current="page"] {
+    color: white;
+  }
 }
 
 .navbar a:hover {
-  color: grey;
+  color: white;
 }
 
 .logo {
@@ -51,7 +55,7 @@
   text-decoration: none;
   font-size: 1.2em;
   font-weight: 400;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /*------burger menu-------*/
@@ -194,12 +198,16 @@
     text-decoration: none;
     font-size: 0.9em;
     font-weight: lighter;
-    color: white;
+    color: grey;
     cursor: pointer;
+
+    &[aria-current="page"] {
+      color: rgba(255, 255, 255, 0.9);
+    }
   }
 
   .navbar-screens a:hover {
-    color: grey;
+    color: rgba(255, 255, 255, 0.9);
   }
 
   .logo-screens {
@@ -209,7 +217,7 @@
     text-decoration: none;
     font-size: 1.2em;
     font-weight: 400;
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
   }
 }
 

@@ -36,12 +36,15 @@
   text-decoration: none;
   font-size: 0.9em;
   font-weight: lighter;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
+}
+.navbar a[aria-current=page] {
+  color: white;
 }
 
 .navbar a:hover {
-  color: grey;
+  color: white;
 }
 
 .logo {
@@ -51,7 +54,7 @@
   text-decoration: none;
   font-size: 1.2em;
   font-weight: 400;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /*------burger menu-------*/
@@ -203,11 +206,14 @@
   text-decoration: none;
   font-size: 0.9em;
   font-weight: lighter;
-  color: white;
+  color: grey;
   cursor: pointer;
 }
+.container-screens .navbar-screens a[aria-current=page] {
+  color: rgba(255, 255, 255, 0.9);
+}
 .container-screens .navbar-screens a:hover {
-  color: grey;
+  color: rgba(255, 255, 255, 0.9);
 }
 .container-screens .logo-screens {
   display: flex;
@@ -216,7 +222,7 @@
   text-decoration: none;
   font-size: 1.2em;
   font-weight: 400;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /*-------NAVBAR REST OF THE PAGES-----------*/
