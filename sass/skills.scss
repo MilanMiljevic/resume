@@ -33,6 +33,7 @@
   display: none;
   text-align: center;
   color: gainsboro;
+  margin-top: 20px;
 
   @include mixins.respSpecif(800) {
     display: block;

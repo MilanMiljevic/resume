@@ -5,57 +5,58 @@
 .container {
   width: 100%;
   visibility: hidden;
-}
-.navbar {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  top: 35px;
-  left: 70px;
-  right: 70px;
-  z-index: 1000;
 
-  @include mixins.respSpecif(700) {
-    left: 20px;
-    right: 30px;
+  .navbar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 35px;
+    left: 70px;
+    right: 70px;
+    z-index: 1000;
+
+    @include mixins.respSpecif(700) {
+      left: 20px;
+      right: 30px;
+    }
   }
-}
 
-.tabs {
-  display: flex;
-  text-align: center;
+  .tabs {
+    display: flex;
+    text-align: center;
 
-  @include mixins.respSpecif(700) {
-    display: none;
+    @include mixins.respSpecif(700) {
+      display: none;
+    }
   }
-}
 
-.navbar a {
-  margin-left: 30px;
-  text-decoration: none;
-  font-size: 0.9em;
-  font-weight: lighter;
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
+  .navbar .tabs a {
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
 
-  &[aria-current="page"] {
+    &[aria-current="page"] {
+      color: white;
+    }
+  }
+
+  .navbar .tabs a:hover {
     color: white;
   }
-}
 
-.navbar a:hover {
-  color: white;
-}
-
-.logo {
-  display: flex;
-  justify-content: flex-start;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.2em;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 /*------burger menu-------*/
@@ -88,14 +89,14 @@
 .mobile-menu__item {
   margin-bottom: 15px;
   list-style-type: none;
-}
 
-.mobile-menu__item a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: lighter;
-  padding: 0px 15px;
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: lighter;
+    padding: 0px 15px;
+  }
 }
 
 .burger-wrap {
@@ -181,6 +182,8 @@
     @include mixins.respSpecif(700) {
       left: 20px;
       right: 30px;
+      padding: 35px 30px 25px 20px;
+      margin-bottom: 10px;
     }
   }
 
@@ -193,7 +196,7 @@
     }
   }
 
-  .navbar-screens a {
+  .navbar-screens .tabs-screens a {
     margin-left: 30px;
     text-decoration: none;
     font-size: 0.9em;
@@ -206,7 +209,7 @@
     }
   }
 
-  .navbar-screens a:hover {
+  .navbar-screens .tabs-screens a:hover {
     color: rgba(255, 255, 255, 0.9);
   }
 

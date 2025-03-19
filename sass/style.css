@@ -3,8 +3,7 @@
   width: 100%;
   visibility: hidden;
 }
-
-.navbar {
+.container .navbar {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -15,23 +14,21 @@
   z-index: 1000;
 }
 @media screen and (max-width: 699px) {
-  .navbar {
+  .container .navbar {
     left: 20px;
     right: 30px;
   }
 }
-
-.tabs {
+.container .tabs {
   display: flex;
   text-align: center;
 }
 @media screen and (max-width: 699px) {
-  .tabs {
+  .container .tabs {
     display: none;
   }
 }
-
-.navbar a {
+.container .navbar .tabs a {
   margin-left: 30px;
   text-decoration: none;
   font-size: 0.9em;
@@ -39,15 +36,13 @@
   color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
-.navbar a[aria-current=page] {
+.container .navbar .tabs a[aria-current=page] {
   color: white;
 }
-
-.navbar a:hover {
+.container .navbar .tabs a:hover {
   color: white;
 }
-
-.logo {
+.container .logo {
   display: flex;
   justify-content: flex-start;
   text-align: center;
@@ -90,9 +85,8 @@
   margin-bottom: 15px;
   list-style-type: none;
 }
-
 .mobile-menu__item a {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-size: 2rem;
   font-weight: lighter;
@@ -190,6 +184,8 @@
   .container-screens .navbar-screens {
     left: 20px;
     right: 30px;
+    padding: 35px 30px 25px 20px;
+    margin-bottom: 10px;
   }
 }
 .container-screens .tabs-screens {
@@ -201,7 +197,7 @@
     display: none;
   }
 }
-.container-screens .navbar-screens a {
+.container-screens .navbar-screens .tabs-screens a {
   margin-left: 30px;
   text-decoration: none;
   font-size: 0.9em;
@@ -209,10 +205,10 @@
   color: grey;
   cursor: pointer;
 }
-.container-screens .navbar-screens a[aria-current=page] {
+.container-screens .navbar-screens .tabs-screens a[aria-current=page] {
   color: rgba(255, 255, 255, 0.9);
 }
-.container-screens .navbar-screens a:hover {
+.container-screens .navbar-screens .tabs-screens a:hover {
   color: rgba(255, 255, 255, 0.9);
 }
 .container-screens .logo-screens {
@@ -732,6 +728,7 @@ p {
   display: none;
   text-align: center;
   color: gainsboro;
+  margin-top: 20px;
 }
 @media screen and (max-width: 799px) {
   .tittle-mob {
