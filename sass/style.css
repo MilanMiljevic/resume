@@ -171,6 +171,54 @@
   transform: rotate(-135deg);
 }
 
+/*--------NAVBAR REDESIGN FOR REST OF THE PAGES-----------*/
+.container-screens {
+  width: 100%;
+}
+.container-screens .navbar-screens {
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 70px 25px 70px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 699px) {
+  .container-screens .navbar-screens {
+    left: 20px;
+    right: 30px;
+  }
+}
+.container-screens .tabs-screens {
+  display: flex;
+  text-align: center;
+}
+@media screen and (max-width: 699px) {
+  .container-screens .tabs-screens {
+    display: none;
+  }
+}
+.container-screens .navbar-screens a {
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: lighter;
+  color: white;
+  cursor: pointer;
+}
+.container-screens .navbar-screens a:hover {
+  color: grey;
+}
+.container-screens .logo-screens {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: white;
+}
+
 /*-------NAVBAR REST OF THE PAGES-----------*/
 .navbar-pages {
   position: sticky;
