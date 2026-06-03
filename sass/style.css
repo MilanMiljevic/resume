@@ -475,7 +475,6 @@ p {
   visibility: hidden;
   top: 45%;
   /* Styling for second triangle (border) */
-  /* Styling for second triangle (border) */
 }
 @media screen and (max-width: 999px) {
   #message {
@@ -525,6 +524,9 @@ p {
     margin-left: -20px;
     position: absolute;
   }
+}
+#message {
+  /* Styling for second triangle (border) */
 }
 #message .bubble:before {
   border-left: 20px solid transparent;
@@ -826,82 +828,130 @@ p {
   margin: 8px 20px 8px 0;
   vertical-align: middle;
 }
-.table .rank .line {
+.table .rank .belt-icon {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  animation: fadein 1s;
+}
+.table .rank .belt-icon .bar {
+  position: absolute;
+  top: 18px;
   width: 200px;
   height: 10px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  animation: fadein 1s;
-  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 2px);
+  background-color: inherit;
 }
-.table .rank .line::before {
-  content: "";
+@media screen and (max-width: 799px) {
+  .table .rank .belt-icon .bar {
+    width: 180px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .table .rank .belt-icon .bar {
+    width: 160px;
+  }
+}
+.table .rank .belt-icon .knot-wrap {
   position: absolute;
-  left: 50%;
-  transform: translateX(-52%) perspective(3px) rotateY(-5deg);
-  height: 160%;
-  width: 12px;
-  background: inherit;
-  border: inherit;
-  border-radius: 2px;
+  top: 16px;
+  width: 20px;
+  height: 14px;
+  background-color: inherit;
+  transform: skewX(-20deg);
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
+  z-index: 3;
+}
+.table .rank .belt-icon .tail {
+  position: absolute;
+  top: 28px;
+  height: 24px;
+  background-color: inherit;
   z-index: 2;
-  top: -30%;
 }
-.table .rank .line::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-40%) perspective(3px) rotateY(5deg);
-  height: 160%;
-  width: 12px;
-  background: inherit;
-  border: inherit;
-  border-radius: 2px;
-  z-index: 1;
-  top: -30%;
+.table .rank .belt-icon .tail-l {
+  left: calc(50% - 12px);
+  transform: rotate(20deg);
+  width: 10px;
 }
-.table .rank .line.w {
-  background: #f5f5f5;
-  border: 1px solid #e0e0e0;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+.table .rank .belt-icon .tail-r {
+  right: calc(50% - 10px);
+  transform: rotate(-20deg);
+  border-left: 2px solid #000000;
+  width: 11px;
 }
-.table .rank .line.y {
-  background: #ae9513;
-  border: 1px solid #837217;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+.table .rank .belt-icon.w .bar {
+  background-color: #f5f5f5;
 }
-.table .rank .line.o {
-  background: #a85d03;
-  border: 1px solid #7f4701;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+.table .rank .belt-icon.w .knot-wrap {
+  background-color: #f5f5f5;
+  border-color: #e0e0e0;
 }
-.table .rank .line.g {
-  background: #0a500a;
-  border: 1px solid #104310;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+.table .rank .belt-icon.w .tail {
+  background-color: #f5f5f5;
 }
-.table .rank .line.b {
-  background: #0000b2;
-  border: 1px solid #010165;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+.table .rank .belt-icon.w .tail-l {
+  border-top-color: #e0e0e0;
 }
-.table .rank .line.br {
-  background: #472309;
-  border: 1px solid #381a05;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+.table .rank .belt-icon.w .tail-r {
+  border-top-color: #e0e0e0;
+  border-left-color: #e0e0e0;
 }
-.table .rank .line.k {
-  background: #212121;
-  border: 1px solid #000000;
-  box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.1);
-  position: relative;
+.table .rank .belt-icon.y .bar {
+  background-color: #ae9513;
 }
-.table .rank .line.k::before, .table .rank .line.k::after {
-  box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.1);
+.table .rank .belt-icon.y .knot-wrap {
+  background-color: #ae9513;
 }
-.table .rank .line::before, .table .rank .line::after {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), transparent 35%, transparent 65%, rgba(0, 0, 0, 0.15)), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 2px);
+.table .rank .belt-icon.y .tail {
+  background-color: #ae9513;
+}
+.table .rank .belt-icon.o .bar {
+  background-color: #a85d03;
+}
+.table .rank .belt-icon.o .knot-wrap {
+  background-color: #a85d03;
+}
+.table .rank .belt-icon.o .tail {
+  background-color: #a85d03;
+}
+.table .rank .belt-icon.g .bar {
+  background-color: #0a500a;
+}
+.table .rank .belt-icon.g .knot-wrap {
+  background-color: #0a500a;
+}
+.table .rank .belt-icon.g .tail {
+  background-color: #0a500a;
+}
+.table .rank .belt-icon.b .bar {
+  background-color: #0000b2;
+}
+.table .rank .belt-icon.b .knot-wrap {
+  background-color: #0000b2;
+}
+.table .rank .belt-icon.b .tail {
+  background-color: #0000b2;
+}
+.table .rank .belt-icon.br .bar {
+  background-color: #472309;
+}
+.table .rank .belt-icon.br .knot-wrap {
+  background-color: #472309;
+}
+.table .rank .belt-icon.br .tail {
+  background-color: #472309;
+}
+.table .rank .belt-icon.k .bar {
+  background-color: #212121;
+}
+.table .rank .belt-icon.k .knot-wrap {
+  background-color: #212121;
+}
+.table .rank .belt-icon.k .tail {
+  background-color: #212121;
 }
 
 @keyframes twinkle {
