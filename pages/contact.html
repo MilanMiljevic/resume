@@ -57,38 +57,50 @@
       </div>
     </div>
   </div>
-  <section class="container-contact">
-    <section class="box">
-      <div class="tittle">Thank you for your time.</div>
-      <div class="subtittle">Let's get in touch.</div>
-      <form action="https://formsubmit.co/milan.miljevic19@gmail.com" method="POST">
-        <fieldset class="f">
-          <label for="">Name</label>
-          <input type="text" name="name" required>
-        </fieldset>
-        <fieldset class="f">
-          <label for="">Last Name</label>
-          <input type="text" name="lastName" required>
-        </fieldset>
-        <fieldset class="f">
-          <label for="">Email</label>
-          <input type="email" name="email" required>
-        </fieldset>
-        <fieldset class="f">
-          <label for="">Message</label>
-          <textarea name="" name="msg" cols="10" rows="5" required></textarea>
-        </fieldset>
-        <input type="hidden" name="_next" value="https://hire-me-lan.com/pages/thankyou.html">
-        <fieldset class="submit">
-          <button class="btn" type="submit">Send</button>
-        </fieldset>
-      </form>
-    </section>
-    <section class="email">
-      <div class="subtittle">or email me at</div>
-      <div class="tittle">milan.miljevic19@gmail.com</div>
-    </section>
 
+  <section class="contact-section">
+    <div class="contact-container">
+      <!-- heading -->
+      <div class="contact-header fade-up">
+        <h1 class="contact-title">Let's Connect</h1>
+        <p class="contact-subtitle">Have a project or just want to say hello? <br /> Drop me a message.</p>
+      </div>
+
+      <!-- card form -->
+      <div class="contact-card fade-up">
+        <div class="card-heading">
+          <h2 class="card-title">Get in touch</h2>
+          <p class="card-desc">Fill out the form or reach out directly at <a href="mailto:milan.miljevic19@gmail.com"
+              class="email-highlight">milan.miljevic19@gmail.com</a> and I'll
+            get back to you as soon as possible.
+          </p>
+        </div>
+
+        <form action="https://formsubmit.co/milan.miljevic19@gmail.com" method="POST" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your first name" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Your last name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="msg" rows="4" required placeholder="Tell me about your project..."></textarea>
+          </div>
+          <input type="hidden" name="_next" value="https://hire-me-lan.com/pages/thankyou.html" />
+          <button type="submit" class="submit-btn">Send message</button>
+        </form>
+      </div>
+
+    </div>
   </section>
 
   <footer class="footer-contact">

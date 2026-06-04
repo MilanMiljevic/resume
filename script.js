@@ -19,19 +19,21 @@ function typeEffect(element, speed) {
 var speed = 30;
 var p = document.querySelector(".paragraph");
 
-// type affect to body
-setTimeout(function () {
-  p.style.display = "inline-block";
-  typeEffect(p, speed);
-});
+if (p) {
+  setTimeout(function () {
+    p.style.display = "inline-block";
+    typeEffect(p, speed);
+  });
+}
 
 var t = document.querySelector(".paragraph-t");
 
-// type affect to body
-setTimeout(function () {
-  t.style.display = "inline-block";
-  typeEffect(t, speed);
-});
+if (t) {
+  setTimeout(function () {
+    t.style.display = "inline-block";
+    typeEffect(t, speed);
+  });
+}
 
 //burger menu
 
@@ -47,10 +49,12 @@ burger.addEventListener("click", function () {
 });
 
 //click link close menu
-link_menu.addEventListener("click", function () {
-  burger.classList.toggle("active");
-  mobileMenu.classList.toggle("open");
-});
+if (link_menu) {
+  link_menu.addEventListener("click", function () {
+    burger.classList.toggle("active");
+    mobileMenu.classList.toggle("open");
+  });
+}
 
 //scroll to top
 
@@ -193,7 +197,7 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
           console.log("test");
           console.log(event);
         },
-        false
+        false,
       );
 
       $("#portfolio").click(function () {
@@ -222,7 +226,7 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
           console.log("test");
           console.log(event);
         },
-        false
+        false,
       );
 
       $("#portfolio-tablet").click(function () {
@@ -251,7 +255,7 @@ var ImageSequenceTween = new TimelineMax().to(obj, 0.5, {
           console.log("test");
           console.log(event);
         },
-        false
+        false,
       );
 
       $("#portfolio-mob").click(function () {
@@ -339,4 +343,35 @@ document.addEventListener("DOMContentLoaded", function () {
       link.setAttribute("aria-current", "page");
     }
   });
+});
+
+// ─── Intersection Observer — Scroll Reveal ───
+// Run after DOM is ready
+document.addEventListener("DOMContentLoaded", function () {
+  const targets = document.querySelectorAll(".fade-up");
+
+  if (!targets.length) return;
+
+  // If IntersectionObserver is not supported, show everything immediately
+  if (!("IntersectionObserver" in window)) {
+    targets.forEach((el) => el.classList.add("visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -40px 0px",
+    },
+  );
+
+  targets.forEach((el) => observer.observe(el));
 });

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-------NAVBAR-----------*/
 .container {
   width: 100%;
@@ -1069,6 +1070,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-height: 100vh;
   background-color: #040404;
 }
 @media screen and (max-width: 799px) {
@@ -1078,194 +1080,255 @@ p {
   }
 }
 
-.container-contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ─── Container ─── */
+.contact-section {
   width: 100%;
+  padding: 80px 24px 40px;
 }
 @media screen and (max-width: 799px) {
-  .container-contact {
-    flex-direction: column;
+  .contact-section {
+    padding: 56px 16px 32px;
   }
 }
 
-fieldset {
-  border: none;
-  padding: 0;
+.contact-container {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+@media screen and (max-width: 799px) {
+  .contact-container {
+    gap: 32px;
+  }
 }
 
-textarea {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid gainsboro;
-  font-size: 0.8rem;
+/* ─── Header ─── */
+.contact-header {
+  text-align: center;
+  max-width: 480px;
+}
+
+.contact-title {
+  font-size: 2.4rem;
   font-weight: 600;
-  color: whitesmoke;
-  font-family: "Open Sans", sans-serif;
-}
-@media screen and (max-width: 699px) {
-  textarea {
-    font-size: 0.6rem;
-  }
-}
-
-button {
-  background-color: transparent;
-  border: none;
-}
-
-textarea:focus,
-input:focus {
-  outline: none;
-}
-
-.box {
-  padding: 50px;
-  width: 30%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  margin-right: 50px;
-}
-@media screen and (max-width: 1499px) {
-  .box {
-    width: 40%;
-    padding: 40px;
-  }
+  color: #ffffff;
+  margin: 0 0 12px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 @media screen and (max-width: 799px) {
-  .box {
-    width: 60%;
-    padding: 40px;
-    margin-bottom: 30px;
-    margin-right: 0px;
+  .contact-title {
+    font-size: 1.8rem;
   }
 }
-@media screen and (max-width: 699px) {
-  .box {
-    width: 70%;
+
+.contact-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ─── Card ─── */
+.contact-card {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 48px;
+}
+@media screen and (max-width: 799px) {
+  .contact-card {
+    padding: 32px 24px;
   }
 }
 @media screen and (max-width: 499px) {
-  .box {
-    width: 90%;
+  .contact-card {
+    padding: 24px 16px;
   }
-}
-.box .tittle {
-  color: gainsboro;
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-shadow: none;
-  padding-bottom: 10px;
-}
-@media screen and (max-width: 699px) {
-  .box .tittle {
-    font-size: 1.2rem;
-  }
-}
-.box .subtittle {
-  color: gainsboro;
-  font-size: 1.2rem;
-  font-weight: normal;
-  text-shadow: none;
-  padding-bottom: 70px;
-}
-@media screen and (max-width: 699px) {
-  .box .subtittle {
-    font-size: 1rem;
-  }
-}
-.box form .f {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 10px;
-  font-size: 0.6rem;
-  font-weight: normal;
-  text-shadow: none;
-  color: gainsboro;
-}
-.box form .f label {
-  padding-bottom: 2px;
-}
-.box form .f input {
-  background-color: transparent;
-  border: none;
-  height: 2rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: whitesmoke;
-  border-bottom: 1px solid gainsboro;
-}
-@media screen and (max-width: 699px) {
-  .box form .f input {
-    font-size: 0.6rem;
-  }
-}
-.box form .submit {
-  display: flex;
-  justify-content: flex-end;
-}
-@media screen and (max-width: 699px) {
-  .box form .submit {
-    margin-top: 10px;
-    justify-content: center;
-  }
-}
-.box form .submit .btn {
-  padding: 4px 20px;
-  background-color: gainsboro;
-  border: 1px solid #040404;
-  color: #040404;
-  border-radius: 2px;
-  font-size: 0.7rem;
-  font-weight: normal;
-}
-.box form .submit .btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid gainsboro;
-  color: gainsboro;
-  cursor: pointer;
 }
 
-.email {
-  display: block;
+.card-heading {
+  margin-bottom: 32px;
 }
-.email .tittle {
+@media screen and (max-width: 799px) {
+  .card-heading {
+    margin-bottom: 24px;
+  }
+}
+
+.card-title {
   font-size: 1.4rem;
-  font-weight: bold;
-  color: gainsboro;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px;
 }
 @media screen and (max-width: 799px) {
-  .email .tittle {
+  .card-title {
     font-size: 1.2rem;
-    padding-bottom: 10px;
   }
 }
-@media screen and (max-width: 399px) {
-  .email .tittle {
-    font-size: 1rem;
-  }
+
+.card-desc {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  line-height: 1.5;
 }
-@media screen and (max-width: 299px) {
-  .email .tittle {
-    font-size: 0.8rem;
-  }
-}
-.email .subtittle {
-  padding-bottom: 10px;
-  font-size: 1rem;
-  font-weight: normal;
-  color: gainsboro;
+
+/* ─── Form ─── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 @media screen and (max-width: 799px) {
-  .email .subtittle {
-    font-size: 1rem;
+  .contact-form {
+    gap: 16px;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media screen and (max-width: 499px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.01em;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: border-color, box-shadow;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+/* ─── Submit Button ─── */
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 10px 28px;
+  background-color: #ffffff;
+  color: #040404;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, background-color, color;
+}
+.submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  transform: translateY(-1px);
+}
+.submit-btn:active {
+  transform: translateY(0);
+}
+@media screen and (max-width: 799px) {
+  .submit-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+/* ─── Email Alternative ─── */
+.contact-email {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.email-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+}
+
+.email-address {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: color;
+}
+.email-address:hover {
+  color: #ffffff;
+}
+@media screen and (max-width: 799px) {
+  .email-address {
+    font-size: 0.95rem;
   }
 }
 @media screen and (max-width: 399px) {
-  .email .subtittle {
-    font-size: 0.8rem;
+  .email-address {
+    font-size: 0.85rem;
+    word-break: break-all;
   }
+}
+
+/* ─── Scroll Reveal (Intersection Observer) ─── */
+.fade-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.email-highlight {
+  color: #51a2ff;
 }
 
 .footer {

@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-height: 100vh;
   background-color: #040404;
 
   @include mixins.respSpecif(800) {
@@ -13,187 +14,254 @@
   }
 }
 
-.container-contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ─── Container ─── */
+.contact-section {
   width: 100%;
+  padding: 80px 24px 40px;
 
   @include mixins.respSpecif(800) {
-    flex-direction: column;
+    padding: 56px 16px 32px;
   }
 }
 
-fieldset {
-  border: none;
-  padding: 0;
+.contact-container {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @include mixins.respSpecif(800) {
+    gap: 32px;
+  }
 }
 
-textarea {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid gainsboro;
-  font-size: 0.8rem;
+/* ─── Header ─── */
+.contact-header {
+  text-align: center;
+  max-width: 480px;
+}
+
+.contact-title {
+  font-size: 2.4rem;
   font-weight: 600;
-  color: whitesmoke;
-  font-family: "Open Sans", sans-serif;
-
-  @include mixins.respSpecif(700) {
-    font-size: 0.6rem;
-  }
-}
-
-button {
-  background-color: transparent;
-  border: none;
-}
-
-textarea:focus,
-input:focus {
-  outline: none;
-}
-
-.box {
-  padding: 50px;
-  width: 30%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  margin-right: 50px;
-
-  @include mixins.respSpecif(1500) {
-    width: 40%;
-    padding: 40px;
-  }
+  color: #ffffff;
+  margin: 0 0 12px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 
   @include mixins.respSpecif(800) {
-    width: 60%;
-    padding: 40px;
-    margin-bottom: 30px;
-    margin-right: 0px;
+    font-size: 1.8rem;
   }
+}
 
-  @include mixins.respSpecif(700) {
-    width: 70%;
+.contact-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ─── Card ─── */
+.contact-card {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 48px;
+
+  @include mixins.respSpecif(800) {
+    padding: 32px 24px;
   }
 
   @include mixins.respSpecif(500) {
-    width: 90%;
-  }
-
-  .tittle {
-    color: gainsboro;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-shadow: none;
-    padding-bottom: 10px;
-
-    @include mixins.respSpecif(700) {
-      font-size: 1.2rem;
-    }
-  }
-
-  .subtittle {
-    color: gainsboro;
-    font-size: 1.2rem;
-    font-weight: normal;
-    text-shadow: none;
-    padding-bottom: 70px;
-
-    @include mixins.respSpecif(700) {
-      font-size: 1rem;
-    }
-  }
-  form {
-    .f {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 10px;
-      font-size: 0.6rem;
-      font-weight: normal;
-      text-shadow: none;
-      color: gainsboro;
-
-      label {
-        padding-bottom: 2px;
-      }
-
-      input {
-        background-color: transparent;
-        border: none;
-        height: 2rem;
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: whitesmoke;
-        border-bottom: 1px solid gainsboro;
-
-        @include mixins.respSpecif(700) {
-          font-size: 0.6rem;
-        }
-      }
-    }
-    .submit {
-      display: flex;
-      justify-content: flex-end;
-
-      @include mixins.respSpecif(700) {
-        margin-top: 10px;
-        justify-content: center;
-      }
-
-      .btn {
-        padding: 4px 20px;
-        background-color: gainsboro;
-        border: 1px solid #040404;
-        color: #040404;
-        border-radius: 2px;
-        font-size: 0.7rem;
-        font-weight: normal;
-
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-          border: 1px solid gainsboro;
-          color: gainsboro;
-          cursor: pointer;
-        }
-      }
-    }
+    padding: 24px 16px;
   }
 }
 
-.email {
-  display: block;
+.card-heading {
+  margin-bottom: 32px;
 
-  .tittle {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: gainsboro;
+  @include mixins.respSpecif(800) {
+    margin-bottom: 24px;
+  }
+}
 
-    @include mixins.respSpecif(800) {
-      font-size: 1.2rem;
-      padding-bottom: 10px;
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px;
+
+  @include mixins.respSpecif(800) {
+    font-size: 1.2rem;
+  }
+}
+
+.card-desc {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ─── Form ─── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include mixins.respSpecif(800) {
+    gap: 16px;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @include mixins.respSpecif(500) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.01em;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    outline: none;
+    transition:
+      border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: border-color, box-shadow;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.25);
     }
 
-    @include mixins.respSpecif(400) {
-      font-size: 1rem;
-    }
-
-    @include mixins.respSpecif(300) {
-      font-size: 0.8rem;
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06);
     }
   }
 
-  .subtittle {
-    padding-bottom: 10px;
-    font-size: 1rem;
-    font-weight: normal;
-    color: gainsboro;
-
-    @include mixins.respSpecif(800) {
-      font-size: 1rem;
-    }
-
-    @include mixins.respSpecif(400) {
-      font-size: 0.8rem;
-    }
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.5;
   }
+}
+
+/* ─── Submit Button ─── */
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 10px 28px;
+  background-color: #ffffff;
+  color: #040404;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, background-color, color;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include mixins.respSpecif(800) {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+/* ─── Email Alternative ─── */
+.contact-email {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.email-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+}
+
+.email-address {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: color;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  @include mixins.respSpecif(800) {
+    font-size: 0.95rem;
+  }
+
+  @include mixins.respSpecif(400) {
+    font-size: 0.85rem;
+    word-break: break-all;
+  }
+}
+
+/* ─── Scroll Reveal (Intersection Observer) ─── */
+.fade-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.email-highlight {
+  color: #51a2ff;
 }
