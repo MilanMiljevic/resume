@@ -1,10 +1,14 @@
 @use "mixins";
 
+$ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+$belt-dim: rgba(255, 255, 255, 0.06);
+
 .layout--skills {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-height: 100vh;
   background-color: #040404;
 
   @include mixins.respSpecif(800) {
@@ -14,273 +18,270 @@
   }
 }
 
-.container-skills {
-  display: flex;
-  justify-content: center;
+/* ─── Section Container ─── */
+.skills-section {
   width: 100%;
+  padding: 64px 24px 40px;
 
   @include mixins.respSpecif(800) {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @include mixins.respSpecif(500) {
-    display: block;
+    padding: 48px 16px 32px;
   }
 }
 
-.tittle-mob {
-  display: none;
-  text-align: center;
-  color: gainsboro;
-  margin-top: 20px;
-
-  @include mixins.respSpecif(800) {
-    display: block;
-  }
-
-  .tittle {
-    font-size: 1.6rem;
-    font-weight: bold;
-    padding-bottom: 50px;
-  }
-}
-
-.karate-image {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.head {
+.skills-container {
+  max-width: 560px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 80px;
+  gap: 40px;
 
   @include mixins.respSpecif(800) {
-    flex-direction: row;
-    padding-right: 0px;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    justify-content: center;
-  }
-
-  @include mixins.respSpecif(400) {
-    padding: 0px;
-  }
-
-  .karate {
-    width: 250px;
-    padding-bottom: 15px;
-    object-fit: cover;
-
-    @include mixins.respSpecif(800) {
-      margin-right: 20px;
-    }
-
-    @include mixins.respSpecif(400) {
-      width: 200px;
-    }
-  }
-
-  .tittle-desktop {
-    text-align: center;
-    color: gainsboro;
-
-    @include mixins.respSpecif(800) {
-      display: none;
-    }
-
-    .tittle {
-      font-size: 1.4rem;
-      font-weight: bold;
-      padding-bottom: 50px;
-    }
+    gap: 32px;
   }
 }
 
-.table {
-  padding: 50px 70px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+/* ─── Header ─── */
+.skills-header {
+  text-align: center;
+  max-width: 480px;
+}
+
+.skills-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 
   @include mixins.respSpecif(800) {
-    margin: 0 20px;
+    font-size: 1.8rem;
   }
+}
 
-  @include mixins.respSpecif(400) {
-    padding: 25px 45px;
-  }
+.skills-subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+}
 
-  .rank {
+/* ─── Skills List ─── */
+.skills-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ─── Skill Item ─── */
+.skill-item {
+  width: 100%;
+  cursor: default;
+
+  .skill-inner {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    padding: 5px 0;
+    justify-content: space-between;
+    padding: 16px 12px;
+    margin: 0 -12px;
+    border-radius: 10px;
+    transition: background-color 0.5s $ease-spring;
 
-    .icon {
-      width: 30px;
-      height: 30px;
-      margin: 8px 20px 8px 0;
-      vertical-align: middle;
+    @include mixins.respSpecif(500) {
+      padding: 12px 8px;
+      margin: 0 -8px;
+    }
+  }
+
+  &:hover .skill-inner {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}
+
+/* ─── Left side ─── */
+.skill-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  @include mixins.respSpecif(500) {
+    gap: 10px;
+  }
+}
+
+.skill-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.skill-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: -0.01em;
+  transition: all 0.5s $ease-spring;
+
+  .skill-item:hover & {
+    color: #ffffff;
+    transform: translateX(0);
+  }
+}
+
+/* ─── Right side ─── */
+.skill-right {
+  display: flex;
+  align-items: center;
+  min-width: 140px;
+
+  @include mixins.respSpecif(500) {
+    min-width: 120px;
+  }
+}
+
+/* ─── Belt Icon ─── */
+.belt-icon {
+  position: relative;
+  width: 100%;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+
+  .bar {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 7px;
+    background-color: $belt-dim;
+    border-radius: 1px;
+    transition: background-color 0.5s $ease-spring;
+  }
+
+  .knot-wrap {
+    position: absolute;
+    top: 8px;
+    width: 12px;
+    height: 9px;
+    background-color: $belt-dim;
+    transform: skewX(-20deg);
+    border-left: 1.5px solid transparent;
+    border-right: 1.5px solid transparent;
+    z-index: 3;
+    transition:
+      background-color 0.5s $ease-spring,
+      border-color 0.5s $ease-spring;
+  }
+
+  .tail {
+    position: absolute;
+    top: 16px;
+    height: 12px;
+    background-color: $belt-dim;
+    z-index: 2;
+    transition:
+      background-color 0.5s $ease-spring,
+      border-top-color 0.5s $ease-spring,
+      border-left-color 0.5s $ease-spring;
+  }
+
+  .tail-l {
+    left: calc(50% - 7px);
+    transform: rotate(18deg);
+    width: 6px;
+    border-top: 1.5px solid transparent;
+  }
+
+  .tail-r {
+    right: calc(50% - 6px);
+    transform: rotate(-18deg);
+    width: 6px;
+    border-top: 1.5px solid transparent;
+    border-left: 1.5px solid transparent;
+  }
+
+  // Reveal belt color on parent skill-item hover
+  .skill-item:hover & {
+    .bar {
+      background-color: var(--belt-color-bg);
     }
 
-    .belt-icon {
-      position: relative;
-      width: 200px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      animation: fadein 1s;
+    .knot-wrap {
+      background-color: var(--belt-color);
+      border-color: var(--belt-color);
+    }
 
-      .bar {
-        position: absolute;
-        top: 18px;
-        width: 200px;
-        height: 10px;
-        background-color: inherit;
-
-        @include mixins.respSpecif(800) {
-          width: 180px;
-        }
-
-        @include mixins.respSpecif(400) {
-          width: 160px;
-        }
-      }
-
-      .knot-wrap {
-        position: absolute;
-        top: 16px;
-        width: 20px;
-        height: 14px;
-        background-color: inherit;
-        transform: skewX(-20deg);
-        border-left: 2px solid #000000;
-        border-right: 2px solid #000000;
-        z-index: 3;
-      }
-
-      .tail {
-        position: absolute;
-        top: 28px;
-        height: 24px;
-        background-color: inherit;
-        z-index: 2;
-      }
-
-      .tail-l {
-        left: calc(50% - 12px);
-        transform: rotate(20deg);
-        width: 10px;
-      }
-
-      .tail-r {
-        right: calc(50% - 10px);
-        transform: rotate(-20deg);
-        border-left: 2px solid #000000;
-        width: 11px;
-      }
-
-      &.w {
-        .bar {
-          background-color: #f5f5f5;
-        }
-        .knot-wrap {
-          background-color: #f5f5f5;
-          border-color: #e0e0e0;
-        }
-        .tail {
-          background-color: #f5f5f5;
-        }
-        .tail-l {
-          border-top-color: #e0e0e0;
-        }
-        .tail-r {
-          border-top-color: #e0e0e0;
-          border-left-color: #e0e0e0;
-        }
-      }
-
-      &.y {
-        .bar {
-          background-color: #ae9513;
-        }
-        .knot-wrap {
-          background-color: #ae9513;
-        }
-        .tail {
-          background-color: #ae9513;
-        }
-      }
-
-      &.o {
-        .bar {
-          background-color: #a85d03;
-        }
-        .knot-wrap {
-          background-color: #a85d03;
-        }
-        .tail {
-          background-color: #a85d03;
-        }
-      }
-
-      &.g {
-        .bar {
-          background-color: #0a500a;
-        }
-        .knot-wrap {
-          background-color: #0a500a;
-        }
-        .tail {
-          background-color: #0a500a;
-        }
-      }
-
-      &.b {
-        .bar {
-          background-color: #0000b2;
-        }
-        .knot-wrap {
-          background-color: #0000b2;
-        }
-        .tail {
-          background-color: #0000b2;
-        }
-      }
-
-      &.br {
-        .bar {
-          background-color: #472309;
-        }
-        .knot-wrap {
-          background-color: #472309;
-        }
-        .tail {
-          background-color: #472309;
-        }
-      }
-
-      &.k {
-        .bar {
-          background-color: #212121;
-        }
-        .knot-wrap {
-          background-color: #212121;
-        }
-        .tail {
-          background-color: #212121;
-        }
-      }
+    .tail {
+      background-color: var(--belt-color-bg);
+      border-top-color: var(--belt-color);
+    }
+    .tail-r {
+      border-left-color: var(--belt-color);
     }
   }
 }
 
-@keyframes twinkle {
+// Belt color variables tied to data-belt
+.skill-item[data-belt="k"] {
+  --belt-color: #212121;
+  --belt-color-bg: rgba(33, 33, 33, 0.8);
+}
+
+.skill-item[data-belt="br"] {
+  --belt-color: rgb(120, 50, 0);
+  --belt-color-bg: rgba(120, 50, 0, 0.8);
+}
+
+.skill-item[data-belt="b"] {
+  --belt-color: rgb(0, 0, 255);
+  --belt-color-bg: rgba(0, 0, 255, 0.8);
+}
+
+.skill-item[data-belt="o"] {
+  --belt-color: rgb(220, 103, 0);
+  --belt-color-bg: rgba(220, 103, 0, 0.8);
+}
+
+.skill-item[data-belt="y"] {
+  --belt-color: rgb(216, 184, 25);
+  --belt-color-bg: rgba(216, 184, 25, 0.8);
+}
+
+/* ─── Skill Divider ─── */
+.skill-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.06);
+  transition: background-color 0.5s $ease-spring;
+}
+
+/* ─── Footer Hint ─── */
+.skills-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
+}
+
+.footer-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.footer-hint {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.04em;
+}
+
+@keyframes pulse-dot {
   0%,
   100% {
     opacity: 0.3;
@@ -290,13 +291,32 @@
   }
 }
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
+/* ─── Karate gif ─── */
+.karate-wrap {
+  display: flex;
+  justify-content: center;
+
+  .karate-image {
+    max-width: 180px;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: opacity 0.5s $ease-spring;
+
+    &:hover {
+      opacity: 1;
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+}
+
+/* ─── Scroll Reveal ─── */
+.fade-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.7s $ease-spring,
+    transform 0.7s $ease-spring;
+  will-change: opacity, transform;
 }
