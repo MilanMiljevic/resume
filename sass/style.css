@@ -476,6 +476,7 @@ p {
   visibility: hidden;
   top: 45%;
   /* Styling for second triangle (border) */
+  /* Styling for second triangle (border) */
 }
 @media screen and (max-width: 999px) {
   #message {
@@ -525,9 +526,6 @@ p {
     margin-left: -20px;
     position: absolute;
   }
-}
-#message {
-  /* Styling for second triangle (border) */
 }
 #message .bubble:before {
   border-left: 20px solid transparent;
@@ -792,8 +790,10 @@ p {
     margin: 0 -8px;
   }
 }
-.skill-item:hover .skill-inner {
-  background-color: rgba(255, 255, 255, 0.03);
+@media (hover: hover) {
+  .skill-item:hover .skill-inner {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
 }
 
 /* ─── Left side ─── */
@@ -822,9 +822,11 @@ p {
   letter-spacing: -0.01em;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.skill-item:hover .skill-name {
-  color: #ffffff;
-  transform: translateX(0);
+@media (hover: hover) {
+  .skill-item:hover .skill-name {
+    color: #ffffff;
+    transform: translateX(0);
+  }
 }
 
 /* ─── Right side ─── */
@@ -890,29 +892,33 @@ p {
   border-top: 1.5px solid transparent;
   border-left: 1.5px solid transparent;
 }
-.skill-item:hover .belt-icon .bar {
-  background-color: var(--belt-color-bg);
+@media (hover: hover) {
+  .skill-item:hover .belt-icon .bar {
+    background-color: var(--belt-color-bg);
+  }
+  .skill-item:hover .belt-icon .knot-wrap {
+    background-color: var(--belt-color);
+    border-color: var(--belt-color);
+  }
+  .skill-item:hover .belt-icon .tail {
+    background-color: var(--belt-color-bg);
+    border-top-color: var(--belt-color);
+  }
+  .skill-item:hover .belt-icon .tail-r {
+    border-left-color: var(--belt-color);
+  }
 }
-.skill-item:hover .belt-icon .knot-wrap {
-  background-color: var(--belt-color);
-  border-color: var(--belt-color);
-}
-.skill-item:hover .belt-icon .tail {
-  background-color: var(--belt-color-bg);
-  border-top-color: var(--belt-color);
-}
-.skill-item:hover .belt-icon .tail-r {
-  border-left-color: var(--belt-color);
-}
-.skill-item[data-belt=k]:hover .belt-icon .bar {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-.skill-item[data-belt=k]:hover .belt-icon .knot-wrap {
-  background-color: #1d1d1d;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-.skill-item[data-belt=k]:hover .belt-icon .tail {
-  border: 1px solid rgba(255, 255, 255, 0.3);
+@media (hover: hover) {
+  .skill-item[data-belt=k]:hover .belt-icon .bar {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .skill-item[data-belt=k]:hover .belt-icon .knot-wrap {
+    background-color: #1d1d1d;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .skill-item[data-belt=k]:hover .belt-icon .tail {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
 }
 
 .skill-item[data-belt=k] {
@@ -1513,5 +1519,3 @@ p {
 #myBtn:hover {
   background-color: #555;
 }
-
-/*# sourceMappingURL=style.css.map */
