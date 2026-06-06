@@ -158,7 +158,10 @@ $belt-dim: rgba(255, 255, 255, 0.06);
     height: 7px;
     background-color: $belt-dim;
     border-radius: 1px;
-    transition: background-color 0.5s $ease-spring;
+    border: 1px solid transparent;
+    transition:
+      background-color 0.5s $ease-spring,
+      border-color 0.5s $ease-spring;
   }
 
   .knot-wrap {
@@ -222,12 +225,29 @@ $belt-dim: rgba(255, 255, 255, 0.06);
       border-left-color: var(--belt-color);
     }
   }
+
+  // White borders for the black belt only
+  .skill-item[data-belt="k"]:hover & {
+    .bar {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .knot-wrap {
+      background-color: #1d1d1d;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .tail {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
 }
 
 // Belt color variables tied to data-belt
 .skill-item[data-belt="k"] {
   --belt-color: #212121;
-  --belt-color-bg: rgba(33, 33, 33, 0.8);
+  --belt-color-bg: rgb(0, 0, 0);
+  --belt-border: #ffffff;
 }
 
 .skill-item[data-belt="br"] {

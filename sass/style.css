@@ -854,7 +854,8 @@ p {
   height: 7px;
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 1px;
-  transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+  transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .belt-icon .knot-wrap {
   position: absolute;
@@ -903,10 +904,21 @@ p {
 .skill-item:hover .belt-icon .tail-r {
   border-left-color: var(--belt-color);
 }
+.skill-item[data-belt=k]:hover .belt-icon .bar {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.skill-item[data-belt=k]:hover .belt-icon .knot-wrap {
+  background-color: #1d1d1d;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.skill-item[data-belt=k]:hover .belt-icon .tail {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 .skill-item[data-belt=k] {
   --belt-color: #212121;
-  --belt-color-bg: rgba(33, 33, 33, 0.8);
+  --belt-color-bg: rgb(0, 0, 0);
+  --belt-border: #ffffff;
 }
 
 .skill-item[data-belt=br] {
