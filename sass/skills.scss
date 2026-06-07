@@ -66,6 +66,23 @@ $belt-dim: rgba(255, 255, 255, 0.06);
   margin: 0;
   line-height: 1.6;
   font-weight: 400;
+
+  .tap-only {
+    display: none;
+  }
+
+  .hover-only {
+    display: inline;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .tap-only {
+      display: inline;
+    }
+    .hover-only {
+      display: none;
+    }
+  }
 }
 
 /* ─── Skills List ─── */

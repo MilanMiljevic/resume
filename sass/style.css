@@ -763,6 +763,20 @@ p {
   line-height: 1.6;
   font-weight: 400;
 }
+.skills-subtitle .tap-only {
+  display: none;
+}
+.skills-subtitle .hover-only {
+  display: inline;
+}
+@media (hover: none) and (pointer: coarse) {
+  .skills-subtitle .tap-only {
+    display: inline;
+  }
+  .skills-subtitle .hover-only {
+    display: none;
+  }
+}
 
 /* ─── Skills List ─── */
 .skills-list {
