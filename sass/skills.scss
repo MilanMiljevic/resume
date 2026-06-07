@@ -116,12 +116,12 @@ $belt-dim: rgba(255, 255, 255, 0.06);
   // Hover effects — only on devices with real hover capability
   @media (hover: hover) {
     &:hover .skill-inner {
-      background-color: rgba(255, 255, 255, 0.03);
+      background-color: rgba(255, 255, 255, 0.1);
     }
   }
 
   &.active .skill-inner {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.07);
   }
 }
 
@@ -200,7 +200,7 @@ $belt-dim: rgba(255, 255, 255, 0.06);
     top: 8px;
     width: 12px;
     height: 9px;
-    background-color: $belt-dim;
+    background-color: #1c1c1c;
     transform: skewX(-20deg);
     border-left: 1.5px solid transparent;
     border-right: 1.5px solid transparent;
@@ -344,40 +344,6 @@ $belt-dim: rgba(255, 255, 255, 0.06);
   height: 1px;
   background-color: rgba(255, 255, 255, 0.06);
   transition: background-color 0.5s $ease-spring;
-}
-
-/* ─── Footer Hint ─── */
-.skills-footer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  width: 100%;
-}
-
-.footer-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-.footer-hint {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.35);
-  letter-spacing: 0.04em;
-}
-
-@keyframes pulse-dot {
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.8;
-  }
 }
 
 /* ─── Karate gif ─── */
