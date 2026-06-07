@@ -795,6 +795,9 @@ p {
     background-color: rgba(255, 255, 255, 0.03);
   }
 }
+.skill-item.active .skill-inner {
+  background-color: rgba(255, 255, 255, 0.03);
+}
 
 /* ─── Left side ─── */
 .skill-left {
@@ -827,6 +830,10 @@ p {
     color: #ffffff;
     transform: translateX(0);
   }
+}
+.skill-item.active .skill-name {
+  color: #ffffff;
+  transform: translateX(0);
 }
 
 /* ─── Right side ─── */
@@ -908,6 +915,20 @@ p {
     border-left-color: var(--belt-color);
   }
 }
+.skill-item.active .belt-icon .bar {
+  background-color: var(--belt-color-bg);
+}
+.skill-item.active .belt-icon .knot-wrap {
+  background-color: var(--belt-color);
+  border-color: var(--belt-color);
+}
+.skill-item.active .belt-icon .tail {
+  background-color: var(--belt-color-bg);
+  border-top-color: var(--belt-color);
+}
+.skill-item.active .belt-icon .tail-r {
+  border-left-color: var(--belt-color);
+}
 @media (hover: hover) {
   .skill-item[data-belt=k]:hover .belt-icon .bar {
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -919,6 +940,16 @@ p {
   .skill-item[data-belt=k]:hover .belt-icon .tail {
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
+}
+.skill-item[data-belt=k].active .belt-icon .bar {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.skill-item[data-belt=k].active .belt-icon .knot-wrap {
+  background-color: #1d1d1d;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.skill-item[data-belt=k].active .belt-icon .tail {
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .skill-item[data-belt=k] {

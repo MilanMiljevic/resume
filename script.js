@@ -375,3 +375,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   targets.forEach((el) => observer.observe(el));
 });
+
+// ─── Skills — tap to reveal belt ───
+document.querySelectorAll(".skill-item").forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (this.classList.contains("active")) {
+      this.classList.remove("active");
+      return;
+    }
+    document
+      .querySelectorAll(".skill-item")
+      .forEach((el) => el.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".skill-item")) {
+    document
+      .querySelectorAll(".skill-item")
+      .forEach((el) => el.classList.remove("active"));
+  }
+});
