@@ -476,7 +476,6 @@ p {
   visibility: hidden;
   top: 45%;
   /* Styling for second triangle (border) */
-  /* Styling for second triangle (border) */
 }
 @media screen and (max-width: 999px) {
   #message {
@@ -526,6 +525,9 @@ p {
     margin-left: -20px;
     position: absolute;
   }
+}
+#message {
+  /* Styling for second triangle (border) */
 }
 #message .bubble:before {
   border-left: 20px solid transparent;
@@ -773,7 +775,7 @@ p {
 /* ─── Skill Item ─── */
 .skill-item {
   width: 100%;
-  cursor: default;
+  cursor: pointer;
 }
 .skill-item .skill-inner {
   display: flex;
@@ -1550,3 +1552,5 @@ p {
 #myBtn:hover {
   background-color: #555;
 }
+
+/*# sourceMappingURL=style.css.map */

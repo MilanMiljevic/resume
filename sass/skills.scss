@@ -79,7 +79,7 @@ $belt-dim: rgba(255, 255, 255, 0.06);
 /* ─── Skill Item ─── */
 .skill-item {
   width: 100%;
-  cursor: default;
+  cursor: pointer;
 
   .skill-inner {
     display: flex;
