@@ -625,10 +625,134 @@ p {
   }
 }
 
+/* ─── Page Layout ─── */
 .layout--port {
   height: auto;
 }
 
+/* ─── Brand Splash (fullscreen overlay) ─── */
+.brand-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  visibility: visible;
+}
+
+.brand-splash.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ─── Brand Animation ─── */
+.brand-animation {
+  display: flex;
+  flex-direction: column;
+  height: calc(var(--row-height, 90px) * 2);
+  font-size: var(--anim-font-size, 5rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+}
+
+.anim-row {
+  display: flex;
+  height: var(--row-height, 90px);
+  line-height: var(--row-height, 90px);
+  white-space: pre;
+}
+
+.text-black {
+  color: #ffffff;
+}
+
+.text-grey {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ─── Animation Chunks ─── */
+.chunk-jevic {
+  position: relative;
+  z-index: 10;
+  animation: moveJevic 5.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.chunk-mil-drop {
+  position: relative;
+  z-index: 5;
+  animation: delayedMilDrop 5.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.chunk-an-reveal {
+  animation: fadeTopAn 5.5s ease-in-out forwards;
+}
+
+/* ─── Keyframes ─── */
+@keyframes moveJevic {
+  0%, 15% {
+    transform: translateY(calc(var(--row-height, 90px) * -1));
+  }
+  30%, 92% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes delayedMilDrop {
+  0%, 32% {
+    transform: translateY(calc(var(--row-height, 90px) * -1));
+    opacity: 0;
+    color: #ffffff;
+  }
+  33% {
+    opacity: 1;
+  }
+  47% {
+    transform: translateY(0);
+    color: #ffffff;
+  }
+  57%, 92% {
+    transform: translateY(0);
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+@keyframes fadeTopAn {
+  0%, 47% {
+    opacity: 0;
+  }
+  57%, 92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ─── Portfolio Content (hidden until splash ends) ─── */
+.portfolio-content {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.portfolio-content.visible {
+  opacity: 1;
+}
+
+/* ─── GIF ─── */
 .gif {
   columns: 1;
   margin: auto;
@@ -638,7 +762,6 @@ p {
 
 .gif-desktop {
   width: 100%;
-  /*max-width: 300px;*/
   border-radius: 0.4em;
 }
 @media screen and (max-width: 499px) {
@@ -659,6 +782,7 @@ p {
   }
 }
 
+/* ─── Gallery ─── */
 .gallery {
   columns: 3;
   margin: auto;
@@ -668,16 +792,16 @@ p {
 
 .image-portfolio {
   width: 100%;
-  /*max-width: 300px;*/
   margin-top: 15px;
   border-radius: 0.4em;
 }
 
+/* ─── Responsive ─── */
 @media screen and (max-width: 767px) {
   .gallery {
     columns: 1;
     max-width: 100%;
-    margin: 0px 10px;
+    margin: 0 10px;
     column-gap: 5px;
   }
   .image-portfolio {
@@ -685,7 +809,7 @@ p {
   }
   .gif {
     max-width: 100%;
-    margin: 0px 10px;
+    margin: 0 10px;
     column-gap: 5px;
   }
 }
@@ -693,6 +817,13 @@ p {
   .gallery {
     columns: 2;
     max-width: 100%;
+  }
+}
+/* ─── Splash responsive ─── */
+@media (max-width: 768px) {
+  .brand-animation {
+    --row-height: 45px;
+    --anim-font-size: 2.3rem;
   }
 }
 .layout--skills {
